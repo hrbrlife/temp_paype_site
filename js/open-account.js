@@ -1,17 +1,37 @@
 /**
- * paype.cc — Open Account routing.
+ * paype.cc — Open Account routing  (PWA-first)
  *
- * Detection matrix (evaluated in order):
- *   Desktop / PWA standalone    →  same-tab → ACCOUNT_URL
- *   Mobile in-app browser       →  breakout: Android intent:// + overlay, iOS overlay
- *   Android non-Chrome          →  intent targeting Chrome + overlay fallback
- *     (incl. Brave, Samsung, Firefox, Opera, Edge, DDG, UC…)
- *   iOS non-Safari              →  overlay "Open in Safari"
- *     (incl. Chrome for iOS, Firefox iOS, Edge iOS, DDG…)
- *   Correct mobile browser      →  same-tab → ACCOUNT_URL  (PWA install works)
+ * Decision tree (evaluated in order):
  *
- * Brave on Android spoofs Chrome UA — detected via navigator.brave (async).
+ *  ① Desktop / standalone PWA     →  same-tab navigate to ACCOUNT_URL
+ *
+ *  ② In-app browser (any platform)
+ *     Android                     →  intent:// (no package) + overlay fallback
+ *     iOS                         →  overlay "Open in Safari / Chrome"
+ *
+ *  ③ Android — wrong browser
+ *     (Samsung, Brave, Firefox, Opera, DDG, UC, YaBrowser, …)
+ *                                  →  intent targeting com.android.chrome + overlay
+ *     ALLOWED: Chrome, Edge        →  navigate
+ *
+ *  ④ iOS — any real browser
+ *     (Safari, Chrome iOS, Edge iOS, Firefox iOS, DDG iOS, …)
+ *                                  →  navigate  ✓
+ *     iOS 16.4+: all real browsers support Add to Home Screen via Share sheet.
+ *     Only in-app WebViews (case ②) can't install — those are blocked above.
+ *     No programmatic redirect to Safari possible or needed.
+ *
+ * Brave on Android spoofs Chrome UA completely.
+ * Detected via: navigator.brave (async) + navigator.userAgentData.brands (Client Hints).
+ * Both are started at page load so the flag is ready before any tap.
+ *
  * All [data-open-account] elements handled via event delegation (dynamic-safe).
+ *
+ * Research sources (2024-2025):
+ *   - beforeinstallprompt: Chrome ✓, Edge ✓, Samsung (broken v27) ✗, Brave (shortcut only) ✗
+ *   - iOS PWA install from non-Safari: supported since iOS 16.4 via Share sheet
+ *   - intent:// must originate from a user gesture (click), not a timer
+ *   - Brave issue #40858 closed "not planned" — shortcut, not true PWA
  */
 (function () {
   'use strict';
@@ -46,7 +66,7 @@
     whatsapp:  /WhatsApp/i.test(ua),
     discord:   /Discord/i.test(ua),
   };
-  // Generic Android WebView ('wv' token, absent from real standalone browsers)
+  // Generic Android WebView: 'wv' token (absent from standalone browsers)
   var isAndroidWV = isAndroid && /\bwv\b/.test(ua);
   var isInApp = isAndroidWV || Object.keys(IA).some(function (k) { return IA[k]; });
 
@@ -67,40 +87,65 @@
     return 'this app';
   })();
 
-  // ── Primary browser detection ─────────────────────────────────
-  // iOS Safari: absence of all known iOS-wrapper markers
-  // (CriOS=Chrome, FxiOS=Firefox, EdgiOS=Edge, OPiOS=Opera, DDG, Brave etc.)
-  var isSafariIOS = isIOS && !isInApp &&
-    !/CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo|Brave/i.test(ua);
+  // ── Android browser classification ────────────────────────────
+  // Check order matters: Samsung contains Chrome/, Edge contains Chrome/, etc.
+  // so we must identify them before falling through to the generic Chrome check.
+  //
+  // PWA-capable (true beforeinstallprompt + app-drawer install):
+  //   Chrome ✓  |  Edge ✓
+  // Broken / shortcut-only / not supported:
+  //   Samsung Internet (v27+ beforeinstallprompt broken, WebAPKs flagged by Play Protect)
+  //   Firefox (no beforeinstallprompt, no app drawer)
+  //   Opera (beforeinstallprompt unreliable)
+  //   DuckDuckGo (shortcut only)
+  //   UC Browser (no PWA)
+  //   Yandex Browser (no PWA)
+  //   Brave (shortcut only — issue #40858 closed "not planned")
 
-  // Android Chrome: has Chrome/ token AND none of the known non-Chrome UA markers.
-  // Brave spoofs as Chrome (no UA marker) — caught separately via navigator.brave.
-  var isChromeAndroid = isAndroid && !isInApp &&
+  var isEdgeAndroid    = isAndroid && /EdgA\//i.test(ua);
+  var isChromeAndroid  = isAndroid && !isEdgeAndroid && !isInApp &&
     /Chrome\/\d/.test(ua) &&
-    !/SamsungBrowser|OPR\/|EdgA\/|Firefox|DuckDuckGo|UCBrowser|YaBrowser|Brave/i.test(ua);
+    !/SamsungBrowser|OPR\/|Firefox|DuckDuckGo|UCBrowser|YaBrowser/i.test(ua);
+  // Note: Brave passes the isChromeAndroid test above — corrected async below.
 
-  // Brave detection: navigator.brave exists in Brave (Chrome-spoof).
-  // isBrave.isBrave() is async in modern Brave; we kick it off at page load
-  // so the flag is set long before any user click.
+  // ── Brave detection (two methods, both async-safe) ────────────
+  // Method 1: navigator.brave.isBrave() — official Brave API, returns Promise.
+  // Method 2: navigator.userAgentData.brands — Client Hints, Brave exposes "Brave" brand.
+  // We start both at page load; by the time the user taps a button, the flag is set.
   var isBraveMobile = false;
-  if (isMobile && !isInApp && window.navigator.brave) {
-    try {
-      var braveResult = window.navigator.brave.isBrave();
-      if (braveResult && typeof braveResult.then === 'function') {
-        braveResult.then(function (v) { isBraveMobile = !!v; }).catch(function () { isBraveMobile = true; });
-      } else {
-        isBraveMobile = true; // older sync API
-      }
-    } catch (e) { isBraveMobile = true; }
+  if (isMobile && !isInApp) {
+    // Method 1
+    if (window.navigator.brave) {
+      try {
+        var p = window.navigator.brave.isBrave();
+        if (p && typeof p.then === 'function') {
+          p.then(function (v) { if (v) isBraveMobile = true; }).catch(function () { isBraveMobile = true; });
+        } else {
+          isBraveMobile = true;
+        }
+      } catch (e) { isBraveMobile = true; }
+    }
+    // Method 2 (Client Hints — synchronous, Chromium only)
+    if (!isBraveMobile && navigator.userAgentData && navigator.userAgentData.brands) {
+      isBraveMobile = navigator.userAgentData.brands.some(function (b) {
+        return b.brand === 'Brave';
+      });
+    }
   }
 
-  // Expose for debugging / other modules
+  // ── PWA-capable on Android ─────────────────────────────────────
+  // Returns true at click time (after async Brave check has had time to resolve).
+  function isPWACapableAndroid() {
+    return (isChromeAndroid || isEdgeAndroid) && !isBraveMobile;
+  }
+
+  // Expose detection state for debugging / other modules
   window.__paypeDevice = {
     ua: ua,
     isIOS: isIOS, isAndroid: isAndroid, isMobile: isMobile,
     isStandalone: isStandalone,
     isInApp: isInApp, inAppName: inAppName, inAppSignals: IA,
-    isSafariIOS: isSafariIOS, isChromeAndroid: isChromeAndroid,
+    isChromeAndroid: isChromeAndroid, isEdgeAndroid: isEdgeAndroid,
     get isBrave() { return isBraveMobile; },
     accountURL: ACCOUNT_URL
   };
@@ -109,69 +154,73 @@
   function openAccount(e) {
     e.preventDefault();
 
-    // ① Desktop or already running as PWA — navigate directly
+    // ① Desktop or running as installed PWA — navigate directly
     if (!isMobile || isStandalone) {
       window.location.href = ACCOUNT_URL;
       return;
     }
 
-    // ② In-app browser — must break out first
+    // ② In-app browser — must break out; can't install from here
     if (isInApp) {
       if (isAndroid) {
-        // Intent with no package = Android picks default browser (best for in-app)
-        var intent = 'intent://' + ACCOUNT_URL.replace(/^https?:\/\//, '') +
-          '#Intent;scheme=https;S.browser_fallback_url=' + encodeURIComponent(ACCOUNT_URL) + ';end';
-        window.location.href = intent;
-        setTimeout(function () {
+        // No package specified: Android picks the default browser
+        intentTo(null, function () {
           showOverlay({
             title: 'Open in Chrome',
-            body: 'You\'re in ' + inAppName + '\'s browser — it can\'t install paype.cc as an app.',
+            body: 'You\'re in ' + inAppName + '\'s browser — it can\'t install the paype.cc app.',
             inst: 'Tap <strong>⋮</strong> → <strong>Open in Chrome</strong> (or your default browser)',
           });
-        }, 1400);
+        });
       } else {
+        // iOS — no programmatic breakout; show instructions
         showOverlay({
-          title: 'Open in Safari',
-          body: 'You\'re in ' + inAppName + '\'s browser — it can\'t install paype.cc as an app.',
-          inst: 'Tap <strong>⋯</strong> or <strong>↗ Share</strong> → <strong>Open in Safari</strong>',
+          title: 'Open in your browser',
+          body: 'You\'re in ' + inAppName + '\'s browser — it can\'t install the paype.cc app.',
+          inst: 'Tap <strong>⋯</strong> or <strong>↗ Share</strong> → <strong>Open in Safari</strong> (or Chrome)',
         });
       }
       return;
     }
 
-    // ③ Android — non-Chrome (Brave, Samsung, Firefox, Opera, Edge, DDG, UC, …)
-    if (isAndroid && (!isChromeAndroid || isBraveMobile)) {
-      // Intent targeting Chrome specifically; fallback URL opens default browser if Chrome absent
-      var chromeIntent = 'intent://' + ACCOUNT_URL.replace(/^https?:\/\//, '') +
-        '#Intent;scheme=https;' +
-        'package=com.android.chrome;' +
-        'S.browser_fallback_url=' + encodeURIComponent(ACCOUNT_URL) + ';end';
-      window.location.href = chromeIntent;
-      setTimeout(function () {
+    // ③ Android — non-PWA-capable browser
+    //   (Samsung, Brave, Firefox, Opera, DDG, UC, Yandex, unknown Chromium forks, …)
+    if (isAndroid && !isPWACapableAndroid()) {
+      intentTo('com.android.chrome', function () {
         showOverlay({
           title: 'Open in Chrome',
-          body: 'paype.cc needs Chrome to install as a home-screen app and work offline. Your current browser doesn\'t support this.',
-          inst: 'Tap <strong>⋮</strong> → <strong>Open in Chrome</strong>, or paste the link in Chrome.',
+          body: 'paype.cc needs Chrome (or Edge) to install as a home-screen app. Your current browser doesn\'t support this.',
+          inst: 'Tap <strong>⋮</strong> → <strong>Open in Chrome</strong>, or copy the link and paste it in Chrome.',
         });
-      }, 1400);
-      return;
-    }
-
-    // ④ iOS — non-Safari (Chrome for iOS, Firefox iOS, Edge iOS, DDG, …)
-    if (isIOS && !isSafariIOS) {
-      showOverlay({
-        title: 'Open in Safari',
-        body: 'paype.cc needs Safari to install as a home-screen app on iPhone. Other iOS browsers can\'t do this.',
-        inst: 'Tap <strong>↗ Share</strong> → <strong>Open in Safari</strong>, or copy the link and paste it in Safari.',
       });
       return;
     }
 
-    // ⑤ Correct browser (Chrome on Android, Safari on iOS) — go
+    // ④ iOS real browser (Safari, Chrome iOS, Edge iOS, Firefox iOS, DDG, …)
+    //    iOS 16.4+: all real browsers support Add to Home Screen via Share sheet.
+    //    No redirect needed — navigate directly.
+    if (isIOS) {
+      window.location.href = ACCOUNT_URL;
+      return;
+    }
+
+    // ⑤ Chrome / Edge on Android — navigate
     window.location.href = ACCOUNT_URL;
   }
 
-  // ── Overlay (shared by all scenarios) ─────────────────────────
+  // ── Intent helper ─────────────────────────────────────────────
+  // pkg: Android package name (string) or null for default browser.
+  // fallback: called after 1.4s if the intent was not handled.
+  // MUST be called from a user-gesture handler (click) — Chrome blocks intent:// otherwise.
+  function intentTo(pkg, fallback) {
+    var base = ACCOUNT_URL.replace(/^https?:\/\//, '');
+    var intent = 'intent://' + base + '#Intent;scheme=https;' +
+      (pkg ? 'package=' + pkg + ';' : '') +
+      'S.browser_fallback_url=' + encodeURIComponent(ACCOUNT_URL) + ';end';
+    window.location.href = intent;
+    setTimeout(fallback, 1400);
+  }
+
+  // ── Overlay ────────────────────────────────────────────────────
   function showOverlay(opts) {
     if (document.getElementById('paype-breakout')) return;
 
@@ -207,17 +256,16 @@
 
     el.querySelector('.pb-copy').addEventListener('click', function () {
       var btn = this;
-      var text = ACCOUNT_URL;
       var done = function () { btn.textContent = '✓ Copied!'; };
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text); done(); });
-      } else { fallbackCopy(text); done(); }
+        navigator.clipboard.writeText(ACCOUNT_URL).then(done).catch(function () { fallbackCopy(); done(); });
+      } else { fallbackCopy(); done(); }
     });
   }
 
-  function fallbackCopy(text) {
+  function fallbackCopy() {
     var ta = document.createElement('textarea');
-    ta.value = text;
+    ta.value = ACCOUNT_URL;
     ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
     document.body.appendChild(ta);
     ta.focus(); ta.select();
@@ -225,7 +273,7 @@
     ta.remove();
   }
 
-  // ── Event delegation ──────────────────────────────────────────
+  // ── Event delegation (static + dynamic elements) ──────────────
   document.addEventListener('click', function (e) {
     var el = e.target.closest('[data-open-account]');
     if (!el) return;
