@@ -212,6 +212,12 @@ img { max-width: 100%; display: block; }
     /* price table — allow horizontal scroll on mobile but prevent breaking layout */
     table, .price-table, .adv-grid { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     table td, table th, .price-table td, .price-table th { word-break: break-word; overflow-wrap: break-word; hyphens: auto; white-space: normal; }
+    /* tighten table sizing on mobile */
+    .price-table { min-width: 300px; }
+    .price-table th, .price-table td { padding: 8px 10px; }
+    .price-table td:first-child { font-size: 11px; letter-spacing: 0.04em; }
+    .role-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .role-table th, .role-table td { padding: 8px 10px; font-size: 0.82rem; }
     /* images constrained */
     img, svg { max-width: 100%; height: auto; }
     /* nav logo sizing for small screens */
@@ -687,7 +693,7 @@ body.no-mobile-bar { padding-bottom: 0 !important; }
         padding: 8px 12px;
     }
     .mobile-bottom-bar .btn-nav-mobile {
-        flex: 0 1 auto; max-width: 45%;
+        flex: 1; min-width: 0;
         background: var(--paype-lime);
         border: 2px solid var(--paype-ink);
         padding: 10px 14px; cursor: pointer;
