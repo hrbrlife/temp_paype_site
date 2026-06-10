@@ -111,6 +111,10 @@
     var newMain = doc.querySelector('#main-content');
     if (!newMain) { window.location.href = url; return; }
 
+    // Read authoritative language from fetched page's <html lang="..."> attribute
+    var fetchedHtmlEl = doc.querySelector('html');
+    var fetchedLang = fetchedHtmlEl ? (fetchedHtmlEl.getAttribute('lang') || 'en') : 'en';
+
     // Load any new page-specific CSS
     var newStyles = doc.querySelectorAll('link[rel="stylesheet"]');
     newStyles.forEach(function(link){
@@ -131,8 +135,8 @@
       // Scroll to top after page swap
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 
-      // Update nav language links + active states for new URL
-      updateNavAfterSPA(url);
+      // Update nav language links + active states — pass authoritative lang
+      updateNavAfterSPA(url, fetchedLang);
 
       // Execute any new page scripts (deferred)
       var scripts = newMain.querySelectorAll('script');
@@ -155,8 +159,8 @@
       window.dispatchEvent(new CustomEvent('paype:pagechange', {detail: {url: url}}));
     }, 180);
 
-    // Push state
-    var state = {url: url, html: mainEl.innerHTML, title: document.title};
+    // Push state — include lang so back/forward can restore it without re-parsing URL
+    var state = {url: url, html: mainEl.innerHTML, title: document.title, lang: fetchedLang};
     try { history.pushState(state, '', url); } catch(e){}
   }
 
@@ -167,12 +171,12 @@
       mainEl.innerHTML = state.html;
       mainEl.style.opacity = '1';
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      updateNavAfterSPA(state.url);
+      updateNavAfterSPA(state.url, state.lang || null);
       window.dispatchEvent(new CustomEvent('paype:pagechange', {detail: {url: state.url}}));
     }, 150);
   }
 
-  function updateNavAfterSPA(url) {
+  function updateNavAfterSPA(url, authorLang) {
     var knownLangs = ['de', 'es', 'fr', 'pt', 'ru', 'zh'];
     var fullPath = url.replace(/^https?:\/\/[^/]+/, '');
 
@@ -182,18 +186,30 @@
       sitePath = '/' + fullPath.slice(siteBasePath.length); // e.g. '/pt/cards/'
     }
 
-    var pagePath = sitePath; // page path within language, e.g. '/cards/'
-    var currentLang = 'en';
+    var pagePath = sitePath;
+    // Use authoritative lang from <html lang="..."> when available; fall back to URL parsing
+    var currentLang = (authorLang && authorLang.length === 2) ? authorLang : 'en';
 
-    for (var i = 0; i < knownLangs.length; i++) {
-      var pfx = '/' + knownLangs[i] + '/';
-      if (sitePath === '/' + knownLangs[i]) {
-        currentLang = knownLangs[i]; pagePath = '/'; break;
+    if (!authorLang) {
+      // URL-based detection fallback
+      for (var i = 0; i < knownLangs.length; i++) {
+        var pfx = '/' + knownLangs[i] + '/';
+        if (sitePath === '/' + knownLangs[i]) {
+          currentLang = knownLangs[i]; pagePath = '/'; break;
+        }
+        if (sitePath.startsWith(pfx)) {
+          currentLang = knownLangs[i];
+          pagePath = sitePath.slice(pfx.length - 1);
+          break;
+        }
       }
-      if (sitePath.startsWith(pfx)) {
-        currentLang = knownLangs[i];
-        pagePath = sitePath.slice(pfx.length - 1); // '/cards/'
-        break;
+    } else if (currentLang !== 'en') {
+      // Derive pagePath for lang switcher hrefs from URL given known language
+      var pfx2 = '/' + currentLang + '/';
+      if (sitePath === '/' + currentLang) {
+        pagePath = '/';
+      } else if (sitePath.startsWith(pfx2)) {
+        pagePath = sitePath.slice(pfx2.length - 1);
       }
     }
 
