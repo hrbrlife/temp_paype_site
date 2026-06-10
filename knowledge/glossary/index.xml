@@ -3,9 +3,9 @@
   <channel>
     <title>Glossary — paype.cc</title>
     <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/</link>
-    <description>Plain-English definitions of every paype.cc term: MSB, KYC/KYB, UBO, ACH, SWIFT, SEPA, cryptographic audit trail, stablecoin, and more.</description>
+    <description>Plain-English definitions of every paype.cc term: MSB, KYC/KYB, UBO, ACH, SWIFT, SEPA, cryptographic audit trail, and more.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2026 16:38:58 +0400</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 16:54:14 +0400</lastBuildDate>
     <atom:link href="https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/index.xml" rel="self" type="application/rss+xml"/>
     
     <item>
@@ -22,6 +22,14 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/aml/</guid>
       <description>The laws and procedures that prevent criminals from disguising illegal funds. paype runs continuous AML screening.</description>
+    </item>
+    
+    <item>
+      <title>Big Band — paype&#39;s Mid-Volume Tier</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/big-band/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/big-band/</guid>
+      <description>Big Band is paype&#39;s mid-volume discount — 25% off all fees for the rest of any calendar month where your fees exceed $500. Resets monthly, triggers automatically.</description>
     </item>
     
     <item>
@@ -46,6 +54,118 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/fincen/</guid>
       <description>A bureau of the US Treasury and the primary regulator of Money Services Businesses in the United States.</description>
+    </item>
+    
+    <item>
+      <title>KYC / KYB — Know Your Customer / Know Your Business</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/kyc-kyb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/kyc-kyb/</guid>
+      <description>KYC and KYB are the identity verification steps required to open a paype account. Automated in-app — most accounts verified in minutes.</description>
+    </item>
+    
+    <item>
+      <title>Melody — paype&#39;s Default Tier</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/melody/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/melody/</guid>
+      <description>Melody is paype&#39;s starting tier — standard rates, no minimum fees, no application. Every paype account starts on Melody and upgrades automatically as volume grows.</description>
+    </item>
+    
+    <item>
+      <title>Melusina</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/melusina/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/melusina/</guid>
+      <description>Melusina is the open-source financial infrastructure powering paype.cc — multi-party custody, cryptographic signing, compliance automation, and cross-border payment rails.</description>
+    </item>
+    
+    <item>
+      <title>MSB — Money Services Business</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/msb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/msb/</guid>
+      <description>An MSB is a FinCEN-regulated financial service provider. paype.cc is an MSB — not a bank. This matters for what your funds are and are not protected by.</description>
+    </item>
+    
+    <item>
+      <title>OFAC — Office of Foreign Assets Control</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/ofac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/ofac/</guid>
+      <description>OFAC is the US Treasury agency that administers economic sanctions. paype screens every transaction against OFAC lists in real time.</description>
+    </item>
+    
+    <item>
+      <title>Orchestra — paype&#39;s Top Volume Tier</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/orchestra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/orchestra/</guid>
+      <description>Orchestra is paype&#39;s highest volume discount tier — 40% off all fees after you hit $1,000 in cumulative yearly fees. Triggers automatically, no contract.</description>
+    </item>
+    
+    <item>
+      <title>Payment Rails</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/payment-rails/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/payment-rails/</guid>
+      <description>Payment rails are the underlying networks that move money — ACH, SWIFT, SEPA, card networks, and blockchain. paype connects all of them through one account.</description>
+    </item>
+    
+    <item>
+      <title>Payment Request</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/payment-request/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/payment-request/</guid>
+      <description>A payment request is a hosted link you create in paype and share with anyone. They pay by card, bank, or crypto — no paype account needed on their end.</description>
+    </item>
+    
+    <item>
+      <title>Segregated Accounts</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/segregated-accounts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/segregated-accounts/</guid>
+      <description>Your paype funds are held in accounts segregated from paype&#39;s operating capital. paype&#39;s business finances cannot touch your balance.</description>
+    </item>
+    
+    <item>
+      <title>SEPA — Single Euro Payments Area</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/sepa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/sepa/</guid>
+      <description>SEPA is the EU-wide payment network for euro transfers. On paype, SEPA outbound costs from $3 + 0.21% on Orchestra.</description>
+    </item>
+    
+    <item>
+      <title>Sub-Accounts</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/sub-accounts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/sub-accounts/</guid>
+      <description>Sub-accounts are separate wallets inside your paype account — each with its own balance, card, spending limits, and user permissions. Unlimited, free to create.</description>
+    </item>
+    
+    <item>
+      <title>SWIFT — Society for Worldwide Interbank Financial Telecommunication</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/swift/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/swift/</guid>
+      <description>SWIFT is the global messaging network for international bank transfers. On paype, SWIFT outbound starts at $15 + 0.45% on Orchestra, reaching 170+ countries.</description>
+    </item>
+    
+    <item>
+      <title>Tokenization</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/tokenization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/tokenization/</guid>
+      <description>Tokenization replaces your real card number with a device-specific token for every transaction. Merchants never see your actual card details.</description>
+    </item>
+    
+    <item>
+      <title>UBO — Ultimate Beneficial Owner</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/ubo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/ubo/</guid>
+      <description>A UBO is any person who ultimately owns or controls 25% or more of a business. Each UBO must complete identity verification when a business opens a paype account.</description>
     </item>
     
   </channel>

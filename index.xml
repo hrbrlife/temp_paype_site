@@ -5,48 +5,8 @@
     <link>https://hrbrlife.github.io/temp_paype_site/</link>
     <description>Open a business account in minutes — wherever your company is based — and unlock every payment rail: ACH, SWIFT, SEPA, cards, crypto. No monthly fees. No nightmare paperwork.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2026 16:38:58 +0400</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 16:54:14 +0400</lastBuildDate>
     <atom:link href="https://hrbrlife.github.io/temp_paype_site/index.xml" rel="self" type="application/rss+xml"/>
-    
-    <item>
-      <title>ACH — Automated Clearing House</title>
-      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/ach/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/ach/</guid>
-      <description>ACH is the US electronic bank-to-bank payment network. Free on paype, settles in 1–2 business days.</description>
-    </item>
-    
-    <item>
-      <title>AML — Anti-Money Laundering</title>
-      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/aml/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/aml/</guid>
-      <description>The laws and procedures that prevent criminals from disguising illegal funds. paype runs continuous AML screening.</description>
-    </item>
-    
-    <item>
-      <title>BSA — Bank Secrecy Act</title>
-      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/bsa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/bsa/</guid>
-      <description>The primary US anti-money laundering law. paype operates under BSA requirements via its FinCEN registration.</description>
-    </item>
-    
-    <item>
-      <title>Cryptographic audit trail</title>
-      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/cryptographic-audit-trail/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/cryptographic-audit-trail/</guid>
-      <description>A tamper-evident record of every transaction on your account. Every entry carries a cryptographic signature you can independently verify.</description>
-    </item>
-    
-    <item>
-      <title>FinCEN — Financial Crimes Enforcement Network</title>
-      <link>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/fincen/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/fincen/</guid>
-      <description>A bureau of the US Treasury and the primary regulator of Money Services Businesses in the United States.</description>
-    </item>
     
   </channel>
 </rss>

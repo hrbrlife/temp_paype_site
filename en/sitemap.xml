@@ -197,6 +197,10 @@
                 href="https://hrbrlife.github.io/temp_paype_site/legal/api-terms/"
                 />
   </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/big-band/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1484,6 +1488,10 @@
                 href="https://hrbrlife.github.io/temp_paype_site/knowledge/"
                 />
   </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/kyc-kyb/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://hrbrlife.github.io/temp_paype_site/legal/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -1522,6 +1530,22 @@
                 hreflang="en"
                 href="https://hrbrlife.github.io/temp_paype_site/legal/"
                 />
+  </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/melody/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/melusina/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/msb/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/ofac/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://hrbrlife.github.io/temp_paype_site/compliance/</loc>
     <changefreq>monthly</changefreq>
@@ -1601,6 +1625,10 @@
                 href="https://hrbrlife.github.io/temp_paype_site/get-started/"
                 />
   </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/orchestra/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://hrbrlife.github.io/temp_paype_site/methods/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1639,6 +1667,14 @@
                 hreflang="en"
                 href="https://hrbrlife.github.io/temp_paype_site/methods/"
                 />
+  </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/payment-rails/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/payment-request/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://hrbrlife.github.io/temp_paype_site/</loc>
     <changefreq>weekly</changefreq>
@@ -1874,6 +1910,10 @@
                 href="https://hrbrlife.github.io/temp_paype_site/security/"
                 />
   </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/segregated-accounts/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://hrbrlife.github.io/temp_paype_site/send/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -1912,6 +1952,10 @@
                 hreflang="en"
                 href="https://hrbrlife.github.io/temp_paype_site/send/"
                 />
+  </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/sepa/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://hrbrlife.github.io/temp_paype_site/status/</loc>
     <changefreq>daily</changefreq>
@@ -1991,6 +2035,10 @@
                 href="https://hrbrlife.github.io/temp_paype_site/pricing/"
                 />
   </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/sub-accounts/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://hrbrlife.github.io/temp_paype_site/legal/subaccount-terms/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2030,6 +2078,10 @@
                 href="https://hrbrlife.github.io/temp_paype_site/legal/subaccount-terms/"
                 />
   </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/swift/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://hrbrlife.github.io/temp_paype_site/legal/terms/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -2068,5 +2120,13 @@
                 hreflang="en"
                 href="https://hrbrlife.github.io/temp_paype_site/legal/terms/"
                 />
+  </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/tokenization/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/ubo/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

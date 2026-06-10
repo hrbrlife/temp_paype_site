@@ -3507,3 +3507,271 @@ a.trust-badge-item:hover .trust-badge-label { color: var(--paype-ink); }
     body { background: #fff; color: #000; }
     .section--invert { background: #fff; color: #000; border: none; }
 }
+
+/* ── FILTER CHIPS ─────────────────────────────────────────── */
+.filter-chips {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+}
+.filter-chips::-webkit-scrollbar { display: none; }
+.filter-chip {
+    flex-shrink: 0;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border: 2px solid var(--paype-ink);
+    background: transparent;
+    color: var(--paype-ink);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.12s, color 0.12s;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+.filter-chip:hover { background: var(--paype-ink); color: var(--paype-paper); }
+.filter-chip.active { background: var(--paype-ink); color: var(--paype-lime); }
+.filter-chip:focus-visible { outline: 2px solid var(--paype-cyan); outline-offset: 2px; }
+.filtered-out { display: none !important; }
+
+/* ── FAQ JUMP NAV ─────────────────────────────────────────── */
+.faq-jump-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+.faq-jump-nav a {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border: 2px solid var(--paype-ink);
+    color: var(--paype-ink);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.12s, color 0.12s;
+    -webkit-tap-highlight-color: transparent;
+}
+.faq-jump-nav a:hover { background: var(--paype-ink); color: var(--paype-lime); }
+
+/* ── GLOSSARY MOBILE BOTTOM SHEET ────────────────────────── */
+.glossary-backdrop {
+    display: none;
+    position: fixed; inset: 0; z-index: 10000;
+    background: rgba(0,0,0,0.4);
+    -webkit-tap-highlight-color: transparent;
+}
+.glossary-backdrop.is-visible { display: block; }
+
+@media (max-width: 599px) {
+    .glossary-tooltip.is-mobile {
+        position: fixed !important;
+        bottom: 0; left: 0; right: 0; top: auto !important;
+        max-width: 100% !important;
+        width: 100%;
+        transform: translateY(100%);
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transition: transform 0.25s ease !important;
+        z-index: 10001;
+    }
+    .glossary-tooltip.is-mobile.is-open {
+        transform: translateY(0);
+    }
+    .glossary-tooltip.is-mobile .glossary-tooltip-inner {
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        border-top: 4px solid var(--paype-lime);
+        padding: 20px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+        font-size: 0.95rem;
+    }
+    .glossary-tooltip.is-mobile .glossary-tooltip-term {
+        font-size: 1.15rem;
+        display: block;
+        margin-bottom: 6px;
+    }
+    .glossary-tooltip.is-mobile .glossary-tooltip-def {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    .glossary-tooltip.is-mobile .glossary-tooltip-cta {
+        font-size: 12px;
+        margin-top: 14px;
+    }
+}
+
+/* ── GLOSSARY TERM PAGE ───────────────────────────────────── */
+.term-category-badge {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border: 2px solid var(--paype-ink);
+    display: inline-block;
+}
+.term-short-desc {
+    background: var(--color-bg-secondary);
+    border-left: 4px solid var(--paype-lime);
+    padding: 14px 18px;
+    margin-bottom: 28px;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+.term-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 28px 0 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    color: var(--paype-ink);
+}
+.term-related {
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 2px solid var(--paype-ink);
+}
+.term-related h3 {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding-top: 0;
+    border-top: none;
+}
+.related-terms-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.related-term-chip {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border: 2px solid var(--paype-ink);
+    color: var(--paype-ink);
+    text-decoration: none;
+    transition: background 0.12s, color 0.12s;
+}
+.related-term-chip:hover { background: var(--paype-ink); color: var(--paype-lime); }
+.term-cta {
+    margin-top: 32px;
+    padding: 18px 20px;
+    background: var(--color-bg-secondary);
+    border: 2px solid var(--paype-ink);
+}
+.term-back { margin-top: 32px; }
+
+/* ── KNOWLEDGE CARD GRIDS (blog, guides) ─────────────────── */
+.kb-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 8px;
+}
+@media (max-width: 599px) { .kb-grid { grid-template-columns: 1fr; gap: 16px; } }
+.kb-card {
+    border: 2px solid var(--paype-ink);
+    background: var(--color-bg-secondary);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.12s, transform 0.12s;
+    -webkit-tap-highlight-color: transparent;
+}
+.kb-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translate(-2px, -2px);
+}
+.kb-card-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+.kb-card-img-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--paype-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kb-card-img-placeholder span { font-size: 2rem; }
+.kb-card-body {
+    padding: 16px 18px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.kb-card-meta {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+}
+.kb-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+.kb-card p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+    margin: 0;
+    flex: 1;
+}
+.kb-card-badge {
+    display: inline-block;
+    margin-top: 12px;
+    align-self: flex-start;
+    font-family: var(--font-ui);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+}
+.kb-card-badge.beginner { border-color: var(--color-success); color: var(--color-success); }
+.kb-card-badge.intermediate { border-color: var(--color-warning); color: var(--color-warning); }
+
+.kb-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--color-text-muted);
+}
+.kb-empty h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.kb-empty p { font-size: 0.9rem; }

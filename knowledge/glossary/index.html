@@ -7,7 +7,7 @@
 
     
     <title>Glossary | paype.cc</title>
-    <meta name="description" content="Plain-English definitions of every paype.cc term: MSB, KYC/KYB, UBO, ACH, SWIFT, SEPA, cryptographic audit trail, stablecoin, and more.">
+    <meta name="description" content="Plain-English definitions of every paype.cc term: MSB, KYC/KYB, UBO, ACH, SWIFT, SEPA, cryptographic audit trail, and more.">
     <meta name="keywords" content="glossary, definitions, terms, MSB, KYC, ACH, SWIFT, paype"><meta name="author" content="paype.cc">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/">
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/">
     <meta property="og:title" content="Glossary">
-    <meta property="og:description" content="Plain-English definitions of every paype.cc term: MSB, KYC/KYB, UBO, ACH, SWIFT, SEPA, cryptographic audit trail, stablecoin, and more.">
+    <meta property="og:description" content="Plain-English definitions of every paype.cc term: MSB, KYC/KYB, UBO, ACH, SWIFT, SEPA, cryptographic audit trail, and more.">
     <meta property="og:image" content="https://hrbrlife.github.io/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -26,7 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://hrbrlife.github.io/temp_paype_site/knowledge/glossary/">
     <meta name="twitter:title" content="Glossary">
-    <meta name="twitter:description" content="Plain-English definitions of every paype.cc term: MSB, KYC/KYB, UBO, ACH, SWIFT, SEPA, cryptographic audit trail, stablecoin, and more.">
+    <meta name="twitter:description" content="Plain-English definitions of every paype.cc term: MSB, KYC/KYB, UBO, ACH, SWIFT, SEPA, cryptographic audit trail, and more.">
     <meta name="twitter:image" content="https://hrbrlife.github.io/og-image.png">
 
     
@@ -37,7 +37,7 @@
         "@type": "WebPage",
         "name": "Glossary",
         "url": "https:\/\/hrbrlife.github.io\/temp_paype_site\/knowledge\/glossary\/",
-        "description": "Plain-English definitions of every paype.cc term: MSB, KYC\/KYB, UBO, ACH, SWIFT, SEPA, cryptographic audit trail, stablecoin, and more.",
+        "description": "Plain-English definitions of every paype.cc term: MSB, KYC\/KYB, UBO, ACH, SWIFT, SEPA, cryptographic audit trail, and more.",
         "isPartOf": {
             "@type": "WebSite",
             "name": "paype.cc",
@@ -350,77 +350,105 @@
     <div class="page-hero-inner">
         <span class="eyebrow">Knowledge Base</span>
         <h1><span class="juice">Glossary.</span></h1>
-        <p class="hero-desc">Plain-English definitions of every term you'll encounter on paype.cc. No banker jargon — just clear explanations.</p>
+        <p class="hero-desc">Plain-English definitions of every term you'll encounter on paype.cc. No banker jargon.</p>
     </div>
 </section>
 <hr class="section-rule">
 <section class="section">
     <div class="container" style="max-width:82vw">
-        <div class="kb-search" style="margin-bottom:32px">
-            <input class="field-input" type="search" id="glossarySearch" placeholder="Search for a term..." style="width:100%">
+        <div class="kb-search" style="margin-bottom:20px">
+            <input class="field-input" type="search" id="glossarySearch" placeholder="Search for a term..." style="width:100%" aria-label="Search glossary terms">
+        </div>
+        <div class="filter-chips" data-target=".glossary-term-entry" role="tablist" aria-label="Filter by category" style="margin-bottom:28px">
+            <button class="filter-chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter-chip" data-filter="payments" role="tab" aria-selected="false">Payments</button>
+            <button class="filter-chip" data-filter="compliance" role="tab" aria-selected="false">Compliance</button>
+            <button class="filter-chip" data-filter="security" role="tab" aria-selected="false">Security</button>
+            <button class="filter-chip" data-filter="platform" role="tab" aria-selected="false">Platform</button>
         </div>
         <div class="glossary-list">
-            <div class="glossary-term-entry" id="ach">
-                <h3>ACH</h3>
+            <div class="glossary-term-entry" id="ach" data-category="payments">
+                <h3><a href="/knowledge/glossary/ach/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">ACH</a></h3>
                 <p><strong>Automated Clearing House</strong> — the US electronic bank-to-bank payment network. Used to move money between US bank accounts. On paype, ACH transfers in and out are free. Settles in 1–2 business days.</p>
             </div>
-            <div class="glossary-term-entry" id="aml">
-                <h3>AML</h3>
+            <div class="glossary-term-entry" id="aml" data-category="compliance">
+                <h3><a href="/knowledge/glossary/aml/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">AML</a></h3>
                 <p><strong>Anti-Money Laundering</strong> — the set of laws, regulations, and procedures designed to prevent criminals from disguising illegally obtained funds as legitimate income. paype runs continuous AML screening on all accounts.</p>
             </div>
-            <div class="glossary-term-entry" id="bsa">
-                <h3>BSA</h3>
+            <div class="glossary-term-entry" id="big-band" data-category="platform">
+                <h3><a href="/knowledge/glossary/big-band/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">Big Band</a></h3>
+                <p>paype's mid-volume discount tier — 25% off all fees for the rest of any calendar month where your fees exceed $500. Triggers automatically, resets monthly.</p>
+            </div>
+            <div class="glossary-term-entry" id="bsa" data-category="compliance">
+                <h3><a href="/knowledge/glossary/bsa/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">BSA</a></h3>
                 <p><strong>Bank Secrecy Act</strong> — the primary US anti-money laundering law requiring financial institutions (including MSBs) to maintain compliance programs, file reports, and keep records. paype operates under BSA requirements via its FinCEN registration.</p>
             </div>
-            <div class="glossary-term-entry" id="cryptographic-audit-trail">
-                <h3>Cryptographic audit trail</h3>
+            <div class="glossary-term-entry" id="cryptographic-audit-trail" data-category="security">
+                <h3><a href="/knowledge/glossary/cryptographic-audit-trail/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">Cryptographic audit trail</a></h3>
                 <p>A tamper-evident record of every state-changing action on your account. Every entry carries a cryptographic signature that can be independently verified. Every move is recorded and provable — for you and your accountant.</p>
             </div>
-            <div class="glossary-term-entry" id="fincen">
-                <h3>FinCEN</h3>
+            <div class="glossary-term-entry" id="fincen" data-category="compliance">
+                <h3><a href="/knowledge/glossary/fincen/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">FinCEN</a></h3>
                 <p><strong>Financial Crimes Enforcement Network</strong> — a bureau of the US Department of the Treasury and the primary regulator of Money Services Businesses in the United States. paype.cc is registered with FinCEN under 31 CFR §1022.380.</p>
             </div>
-            <div class="glossary-term-entry" id="kyc-kyb">
-                <h3>KYC / KYB</h3>
+            <div class="glossary-term-entry" id="kyc-kyb" data-category="compliance">
+                <h3><a href="/knowledge/glossary/kyc-kyb/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">KYC / KYB</a></h3>
                 <p><strong>Know Your Customer / Know Your Business</strong> — the identity verification process required for account opening. KYC applies to individuals (photo ID + selfie). KYB applies to businesses (registration documents + UBO verification). Both are automated in the paype app.</p>
             </div>
-            <div class="glossary-term-entry" id="melusina">
-                <h3>Melusina</h3>
+            <div class="glossary-term-entry" id="melody" data-category="platform">
+                <h3><a href="/knowledge/glossary/melody/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">Melody</a></h3>
+                <p>paype's default pricing tier. Every account starts here — standard rates, no qualifying threshold, no application required. Upgrades to Big Band or Orchestra happen automatically as your volume grows.</p>
+            </div>
+            <div class="glossary-term-entry" id="melusina" data-category="platform">
+                <h3><a href="/knowledge/glossary/melusina/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">Melusina</a></h3>
                 <p>The open-source financial infrastructure that powers paype.cc — multi-party custody, cryptographic signing, compliance engine, and cross-border rails. <a href="https://melusina.io">Learn more →</a></p>
             </div>
-            <div class="glossary-term-entry" id="msb">
-                <h3>MSB (Money Services Business)</h3>
+            <div class="glossary-term-entry" id="msb" data-category="compliance">
+                <h3><a href="/knowledge/glossary/msb/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">MSB (Money Services Business)</a></h3>
                 <p>A category of financial service provider regulated by FinCEN under the Bank Secrecy Act. MSBs include money transmitters and currency exchangers. paype.cc is an MSB — <strong>not a bank</strong>. It does not take deposits and is not FDIC-insured.</p>
             </div>
-            <div class="glossary-term-entry" id="ofac">
-                <h3>OFAC</h3>
+            <div class="glossary-term-entry" id="ofac" data-category="compliance">
+                <h3><a href="/knowledge/glossary/ofac/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">OFAC</a></h3>
                 <p><strong>Office of Foreign Assets Control</strong> — the US Treasury agency that administers economic and trade sanctions. paype screens all transactions against OFAC sanctions lists in real time.</p>
             </div>
-            <div class="glossary-term-entry" id="payment-request">
-                <h3>Payment request</h3>
+            <div class="glossary-term-entry" id="orchestra" data-category="platform">
+                <h3><a href="/knowledge/glossary/orchestra/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">Orchestra</a></h3>
+                <p>paype's highest volume discount tier — 40% off all fees for the remainder of the calendar year once your cumulative yearly fees exceed $1,000. Triggers automatically. No sales call, no contract.</p>
+            </div>
+            <div class="glossary-term-entry" id="payment-rails" data-category="payments">
+                <h3><a href="/knowledge/glossary/payment-rails/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">Payment rails</a></h3>
+                <p>The underlying networks that move money — ACH, SWIFT, SEPA, card networks, and blockchain. Different rails suit different destinations, currencies, and speeds. paype connects all of them through one account.</p>
+            </div>
+            <div class="glossary-term-entry" id="payment-request" data-category="payments">
+                <h3><a href="/knowledge/glossary/payment-request/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">Payment request</a></h3>
                 <p>A hosted payment link you create in the paype app and share with anyone. The recipient opens the link and pays by card, bank transfer, or crypto — no paype account required on their end. Funds land in your paype balance.</p>
             </div>
-            <div class="glossary-term-entry" id="sepa">
-                <h3>SEPA</h3>
+            <div class="glossary-term-entry" id="sepa" data-category="payments">
+                <h3><a href="/knowledge/glossary/sepa/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">SEPA</a></h3>
                 <p><strong>Single Euro Payments Area</strong> — the EU-wide payment network for euro-denominated bank transfers. On paype, SEPA outbound transfers are $3 + 0.21% on Orchestra ($5 + 0.35% on Melody).</p>
             </div>
-            <div class="glossary-term-entry" id="segregated-accounts">
-                <h3>Segregated accounts</h3>
+            <div class="glossary-term-entry" id="segregated-accounts" data-category="security">
+                <h3><a href="/knowledge/glossary/segregated-accounts/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">Segregated accounts</a></h3>
                 <p>Your funds are held in accounts separate from paype's own operating funds. paype's business finances cannot touch your balance. Commingling occurs only at the correspondent-pool level under strict controls.</p>
             </div>
-            <div class="glossary-term-entry" id="swift">
-                <h3>SWIFT</h3>
+            <div class="glossary-term-entry" id="sub-accounts" data-category="platform">
+                <h3><a href="/knowledge/glossary/sub-accounts/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">Sub-accounts</a></h3>
+                <p>Separate wallets inside your paype account — each with its own balance, card, spending limits, and user permissions. Use them for projects, departments, client escrow, or reserves. Unlimited, free to create.</p>
+            </div>
+            <div class="glossary-term-entry" id="swift" data-category="payments">
+                <h3><a href="/knowledge/glossary/swift/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">SWIFT</a></h3>
                 <p><strong>Society for Worldwide Interbank Financial Telecommunication</strong> — the global messaging network for international bank transfers. On paype, SWIFT outbound is $15 + 0.45% on Orchestra ($25 + 0.75% on Melody), to 170+ countries.</p>
             </div>
-            <div class="glossary-term-entry" id="tokenization">
-                <h3>Tokenization</h3>
+            <div class="glossary-term-entry" id="tokenization" data-category="security">
+                <h3><a href="/knowledge/glossary/tokenization/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">Tokenization</a></h3>
                 <p>The process of replacing your real card number with a device-specific token for each transaction. Apple Pay and Google Pay generate tokens that merchants see instead of your actual card details. If a merchant is compromised, your card stays safe.</p>
             </div>
-            <div class="glossary-term-entry" id="ubo">
-                <h3>UBO (Ultimate Beneficial Owner)</h3>
+            <div class="glossary-term-entry" id="ubo" data-category="compliance">
+                <h3><a href="/knowledge/glossary/ubo/" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--paype-ink)">UBO (Ultimate Beneficial Owner)</a></h3>
                 <p>Each person holding 25% or more of a business applying for a paype account. UBOs must be verified with photo ID and proof of address. Required by AML regulations for business accounts.</p>
             </div>
         </div>
+        <p id="kbNoResults" style="display:none;text-align:center;padding:32px;color:var(--color-text-muted)">No terms found. Try a different search.</p>
     </div>
 </section>
 <script src="/temp_paype_site/js/lib/kb-search.js"></script>
@@ -526,9 +554,9 @@
 </div>
 
     
-    <script src="/temp_paype_site/js/spa-nav.js?v=1781095138" defer></script>
-    <script src="/temp_paype_site/js/nav.js?v=1781095138" defer></script>
-    <script src="/temp_paype_site/js/open-account.js?v=1781095138" defer></script>
+    <script src="/temp_paype_site/js/spa-nav.js?v=1781096054" defer></script>
+    <script src="/temp_paype_site/js/nav.js?v=1781096054" defer></script>
+    <script src="/temp_paype_site/js/open-account.js?v=1781096054" defer></script>
     
     
 
@@ -558,7 +586,7 @@
   </div>
 </div>
 
-    <script src="/temp_paype_site/js/exit-modal.js?v=1781095138" defer></script>
+    <script src="/temp_paype_site/js/exit-modal.js?v=1781096054" defer></script>
 
     
 <div class="claire-chat-widget" id="claireChat" aria-hidden="true">
@@ -610,8 +638,9 @@
   </button>
 </div>
 
-    <script src="/temp_paype_site/js/claire-chat.js?v=1781095138" defer></script>
-    <script src="/temp_paype_site/js/lib/glossary.js?v=1781095138" defer></script>
+    <script src="/temp_paype_site/js/claire-chat.js?v=1781096054" defer></script>
+    <script src="/temp_paype_site/js/lib/glossary.js?v=1781096054" defer></script>
+    <script src="/temp_paype_site/js/lib/filter-chips.js?v=1781096054" defer></script>
 
     
     <a href="https://www.trustpilot.com/review/paype.cc" target="_blank" rel="noopener" class="floating-trust" aria-label="Trustpilot reviews">
