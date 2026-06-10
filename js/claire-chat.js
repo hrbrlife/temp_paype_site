@@ -63,7 +63,7 @@
     },
     {
       qs: ['fees', 'pricing', 'cost', 'how much', 'fee schedule', 'rates'],
-      a: 'Everyone starts on <strong>Melody</strong> (standard rates). Spend $500+/month in fees → auto-upgrade to <strong>Big Band</strong> (25% off). Spend $1,000+/year → auto-upgrade to <strong>Orchestra</strong> (40% off). No sales call, no contract. ACH in/out is free on all tiers. SWIFT from $15 + 0.45% on Orchestra. <a href="/pricing/">Full fee schedule →</a>'
+      a: 'Everyone starts on <strong>Melody</strong> (standard rates). Spend $500+/month in fees → auto-upgrade to <strong>Big Band</strong> (25% off). Spend $1,000+/year → auto-upgrade to <strong>Orchestra</strong> (40% off). No sales call, no contract. P2P is free on all tiers. SWIFT from $15 + 0.45% on Orchestra. <a href="/pricing/">Full fee schedule →</a>'
     },
     {
       qs: ['client pay', 'get paid', 'receive money', 'payment request', 'invoice', 'clients pay'],
@@ -98,8 +98,8 @@
       a: 'Business accounts are <strong>free to open</strong> — same fee schedule as personal. Three roles: Client (full access), Client Assistant (drafts), Client View-Only (read-only). Unlimited sub-accounts, accounting export, cryptographic audit trail. Companies registered anywhere in the world. <a href="/business/">For business →</a>'
     },
     {
-      qs: ['swift', 'sepa', 'ach', 'international', 'wire', 'transfer', 'bank transfer'],
-      a: '<strong>ACH</strong> — free in/out, 1-2 business days. <strong>SWIFT</strong> — 170+ countries, $15 + 0.45% on Orchestra ($25 + 0.75% on Melody). <strong>SEPA</strong> — EUR to EU banks, $3 + 0.21% on Orchestra. All fees shown before you confirm. <a href="/methods/">All methods →</a>'
+      qs: ['swift', 'sepa', 'international', 'wire', 'transfer', 'bank transfer'],
+      a: '<strong>SWIFT</strong> — 170+ countries, $15 + 0.45% on Orchestra ($25 + 0.75% on Melody). <strong>SEPA</strong> — EUR to EU banks, $3 + 0.21% on Orchestra. All fees shown before you confirm. <a href="/methods/">All methods →</a>'
     },
     {
       qs: ['contact', 'support', 'help', 'human', 'email', 'telegram'],

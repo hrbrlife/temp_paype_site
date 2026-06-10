@@ -57,10 +57,10 @@ FM.volumeBands = [
 ];
 
 FM.paymentNeeds = [
-  { id:'bank_in', label:'Receive bank transfers', icon:'🏦', desc:'ACH, SWIFT, SEPA inbound' },
+  { id:'bank_in', label:'Receive bank transfers', icon:'🏦', desc:'SWIFT, SEPA inbound' },
   { id:'card_in', label:'Receive card payments', icon:'💳', desc:'Clients pay you by card' },
   { id:'crypto_in', label:'Receive crypto', icon:'₿', desc:'BTC, ETH, USDT, USDC in' },
-  { id:'bank_out', label:'Send bank transfers', icon:'📤', desc:'ACH, SWIFT, SEPA outbound' },
+  { id:'bank_out', label:'Send bank transfers', icon:'📤', desc:'SWIFT, SEPA outbound' },
   { id:'crypto_out', label:'Send crypto', icon:'🔗', desc:'To any external wallet' },
   { id:'swap', label:'Swap currencies & crypto', icon:'🔄', desc:'Instant conversion' },
   { id:'cards', label:'Debit cards', icon:'💳', desc:'Apple Pay / Google Pay' },

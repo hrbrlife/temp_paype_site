@@ -19,7 +19,7 @@
   function isMobile() { return window.innerWidth < MOBILE_BP; }
 
   var data = {
-    'ach':                       { term: 'ACH',                       def: 'The US electronic bank-to-bank payment network. Free on paype, both directions. Settles in 1–2 business days.' },
+    'ach':                       { term: 'ACH',                       def: 'The US electronic bank-to-bank payment network (not offered by paype). paype uses SWIFT and SEPA for bank transfers.' },
     'aml':                       { term: 'AML',                       def: 'Anti-Money Laundering — laws preventing dirty money entering the financial system. paype runs continuous screening.' },
     'bsa':                       { term: 'BSA',                       def: 'Bank Secrecy Act — the US law requiring financial institutions to maintain AML compliance programs.' },
     'cryptographic-audit-trail': { term: 'Cryptographic Audit Trail', def: 'A tamper-evident record of every action on your account. Every entry carries a verifiable cryptographic signature.' },
@@ -30,7 +30,7 @@
     'msb':                       { term: 'MSB',                       def: 'Money Services Business — a FinCEN-regulated financial service provider. paype is an MSB, not a bank.' },
     'ofac':                      { term: 'OFAC',                      def: 'Office of Foreign Assets Control — the US Treasury agency administering sanctions. paype screens all transactions in real time.' },
     'payment-request':           { term: 'Payment Request',           def: 'A hosted payment link you share — the recipient pays by card, bank, or crypto. No paype account needed on their end.' },
-    'payment-rails':             { term: 'Payment Rails',             def: 'The networks that move money: ACH, SWIFT, SEPA, card networks, blockchain. paype connects all of them.' },
+    'payment-rails':             { term: 'Payment Rails',             def: 'The networks that move money: SWIFT, SEPA, card networks, blockchain. paype connects the major international rails.' },
     'sepa':                      { term: 'SEPA',                      def: 'Single Euro Payments Area — the EU-wide euro payment network. On paype: from $3 + 0.21% on Orchestra.' },
     'segregated-accounts':       { term: 'Segregated Accounts',       def: 'Your funds held separately from paype\'s operating money. paype\'s business finances cannot touch your balance.' },
     'sub-accounts':              { term: 'Sub-Accounts',              def: 'Separate wallets inside your paype account — each with its own balance, card, and spending limits. Unlimited.' },

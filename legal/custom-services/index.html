@@ -354,16 +354,82 @@
 </section>
 <section class="content-section">
     <div class="content-container">
-<h2>Custom Services Overview</h2>
-<p>paype.cc offers bespoke financial services for businesses and high-volume users, including smart contract deployment, VIP over-the-counter (OTC) trading, and custom payment integrations. All custom services are subject to enhanced due diligence and compliance review.</p>
-<h2>Smart Contract Deployment</h2>
-<p>We can deploy and manage custom EVM-compatible smart contracts for payment automation, escrow arrangements, and tokenized asset management. Smart contract services are available to verified business accounts with a minimum engagement value. Contact us to discuss your use case.</p>
-<h2>VIP OTC Trading</h2>
-<p>Large-volume crypto-to-USD or USD-to-crypto conversions can be executed via our OTC desk with minimal slippage. VIP OTC is available for transactions over $50,000 USD equivalent. We provide best-execution pricing with transparent fee disclosure before each transaction.</p>
-<h2>Custom Payment Integrations</h2>
-<p>We offer custom ACH, SWIFT, SEPA, and crypto payment integration services for businesses needing non-standard workflows. Integrations are built on our secure API infrastructure.</p>
-<h2>How to Apply</h2>
-<p>To inquire about custom services, contact <a href="mailto:hello@paype.cc">hello@paype.cc</a> with a description of your requirements. All custom engagements require a signed service agreement and enhanced KYC/AML review.</p>
+<h2>1. Scope</h2>
+<p>These terms govern Paype's custom services: VIP OTC trading, Smart Contract Integration, and Digital Securities Processing. These are custom products — scoped, built, and priced per client. These terms supplement the Paype Terms of Service.</p>
+<h2>2. VIP OTC Trading</h2>
+<h3>2.1 Eligibility</h3>
+<p>Available to verified Orchestra-tier business accounts for transactions over $50,000 equivalent.</p>
+<h3>2.2 Quotes and Execution</h3>
+<ul>
+<li>Quotes are private, non-binding, and valid for the time specified in the quote.</li>
+<li>Each trade is individually quoted based on size, pair, and market conditions.</li>
+<li>Paype may decline to quote or execute any trade at its discretion.</li>
+</ul>
+<h3>2.3 Settlement</h3>
+<ul>
+<li>Settlement terms specified per trade. Standard: T+0 for crypto-crypto, T+1 for fiat-crypto.</li>
+<li>Counterparty risk: you trade with Paype's liquidity providers, not on a public exchange.</li>
+<li>No order book exposure. No slippage. No front-running.</li>
+</ul>
+<h3>2.4 Risks</h3>
+<ul>
+<li>OTC trades are not exchange-traded. No exchange protections apply.</li>
+<li>Prices reflect institutional liquidity conditions and may differ from exchange prices.</li>
+<li>Large trades may require enhanced compliance screening.</li>
+</ul>
+<h2>3. Smart Contract Integration</h2>
+<h3>3.1 Service Description</h3>
+<p>Paype builds and deploys custom smart contracts for automated money flows: recurring splits, conditional payouts, multi-party distributions.</p>
+<h3>3.2 Scope and Delivery</h3>
+<ul>
+<li>Scoped per client. Statement of Work defines deliverables, timeline, and fees.</li>
+<li>Paype deploys and monitors the contract. Client defines the rules.</li>
+</ul>
+<h3>3.3 Risks and Limitations</h3>
+<ul>
+<li>Smart contracts carry inherent risks: code bugs, logic errors, oracle manipulation, economic exploits, governance attacks.</li>
+<li>Immutable contracts cannot be changed after deployment. Upgradeable contracts depend on the upgrade mechanism's security.</li>
+<li>Paype is the infrastructure provider and deployer, not the contract auditor. Independent security audit recommended.</li>
+<li>Paype's liability for smart contract failures is limited to fees paid for the specific smart contract service.</li>
+</ul>
+<h3>3.4 Multi-Sig Requirement</h3>
+<ul>
+<li>All smart contracts involving Paype-custodied assets require multi-sig with Paype as a required signer.</li>
+<li>No single-key control of Paype-custodied assets through smart contracts.</li>
+</ul>
+<h2>4. Digital Securities Processing</h2>
+<h3>4.1 Service Description</h3>
+<p>Paype processes subscription, distribution, and redemption payments for security token issuers. Paype does not: issue tokens, determine whether a token is a security, provide securities law advice, hold security tokens for its own account, or match buyers and sellers.</p>
+<h3>4.2 Issuer Obligations</h3>
+<ul>
+<li>Issuer represents it has independent securities law advice.</li>
+<li>Issuer is responsible for: securities law compliance, investor accreditation verification, disclosure documents, and regulatory filings.</li>
+<li>Issuer indemnifies Paype for securities law claims arising from the issuer's activities.</li>
+</ul>
+<h3>4.3 Payment Processing</h3>
+<ul>
+<li>Paype processes payments in fiat and crypto per standard Paype fees.</li>
+<li>Compliance screening on all transactions: sanctions, AML, KYC.</li>
+<li>Cryptographic audit trail on every payment. Auditor-ready export.</li>
+</ul>
+<h2>5. Recurring Payments and Auto-Top-Up</h2>
+<h3>5.1 Recurring Payments</h3>
+<ul>
+<li>Schedule payments: daily, weekly, or monthly. Set amount, recipient, and rail.</li>
+<li>You authorize each recurring series. You may cancel at any time before the next scheduled execution.</li>
+<li>Failed payments (insufficient balance, rail failure) are retried once. After second failure, the series is paused.</li>
+<li>You are responsible for ensuring sufficient balance for scheduled payments.</li>
+</ul>
+<h3>5.2 Auto-Top-Up</h3>
+<ul>
+<li>Set a minimum balance threshold. When your balance dips below, a top-up bank transfer is initiated automatically.</li>
+<li>Auto-top-up amount: you configure the top-up amount (fixed or to-target).</li>
+<li>Auto-top-up uses a bank transfer (SWIFT or SEPA depending on your account). You authorize the recurring transfer up to the configured amount.</li>
+<li>You may disable auto-top-up at any time. Disabling does not affect already-initiated transfers.</li>
+<li>Insufficient funds in linked bank: top-up fails. You are notified. No overdraft or penalty from Paype. Your bank may charge fees.</li>
+</ul>
+<h2>6. General</h2>
+<p>Custom services are subject to all Paype policies including Acceptable Use, BSA/AML, and sanctions compliance. Paype may decline to provide any custom service at its discretion. Custom services pricing: scoped per client. No public pricing. Non-refundable setup fees may apply.</p>
     </div>
 </section>
 
@@ -462,9 +528,9 @@
 </footer>
 
     
-    <script src="/temp_paype_site/js/spa-nav.js?v=1781112006" defer></script>
-    <script src="/temp_paype_site/js/nav.js?v=1781112006" defer></script>
-    <script src="/temp_paype_site/js/open-account.js?v=1781112006" defer></script>
+    <script src="/temp_paype_site/js/spa-nav.js?v=1781114023" defer></script>
+    <script src="/temp_paype_site/js/nav.js?v=1781114023" defer></script>
+    <script src="/temp_paype_site/js/open-account.js?v=1781114023" defer></script>
     
     
 
@@ -494,7 +560,7 @@
   </div>
 </div>
 
-    <script src="/temp_paype_site/js/exit-modal.js?v=1781112006" defer></script>
+    <script src="/temp_paype_site/js/exit-modal.js?v=1781114023" defer></script>
 
     
 <div class="claire-chat-widget" id="claireChat" aria-hidden="true">
@@ -546,9 +612,10 @@
   </button>
 </div>
 
-    <script src="/temp_paype_site/js/claire-chat.js?v=1781112006" defer></script>
-    <script src="/temp_paype_site/js/lib/glossary.js?v=1781112006" defer></script>
-    <script src="/temp_paype_site/js/lib/filter-chips.js?v=1781112006" defer></script>
+    <script src="/temp_paype_site/js/claire-chat.js?v=1781114023" defer></script>
+    <script src="/temp_paype_site/js/lib/glossary.js?v=1781114023" defer></script>
+    <script src="/temp_paype_site/js/lib/filter-chips.js?v=1781114023" defer></script>
+    <script src="/temp_paype_site/js/lib/kb-search.js?v=1781114023" defer></script>
 
     
     <a href="https://www.trustpilot.com/review/paype.cc" target="_blank" rel="noopener" class="floating-trust" aria-label="Trustpilot reviews">
