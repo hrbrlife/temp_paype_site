@@ -1640,45 +1640,6 @@
                 href="https://hrbrlife.github.io/temp_paype_site/fr/personal/"
                 />
   </url><url>
-    <loc>https://hrbrlife.github.io/temp_paype_site/fr/for-me/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hrbrlife.github.io/temp_paype_site/for-me/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://hrbrlife.github.io/temp_paype_site/es/for-me/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://hrbrlife.github.io/temp_paype_site/de/for-me/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://hrbrlife.github.io/temp_paype_site/pt/for-me/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="https://hrbrlife.github.io/temp_paype_site/ru/for-me/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://hrbrlife.github.io/temp_paype_site/zh/for-me/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://hrbrlife.github.io/temp_paype_site/fr/for-me/"
-                />
-  </url><url>
     <loc>https://hrbrlife.github.io/temp_paype_site/fr/refer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
