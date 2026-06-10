@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420">
+<defs>
+  <pattern id="hv" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+    <rect width="8" height="8" fill="white"/>
+    <line x1="4" y1="0" x2="4" y2="8" stroke="#0A0A0A" stroke-width="1.5"/>
+  </pattern>
+  <clipPath id="globe-clip">
+    <circle cx="100" cy="100" r="82"/>
+  </clipPath>
+</defs>
+<rect width="860" height="420" fill="white"/>
+
+<!-- ═══ ICON 1: Bolt + Door  (0,0) ═══ -->
+<g transform="translate(0,0)">
+  <rect x="12" y="10" width="26" height="180" fill="url(#hv)" stroke="#0A0A0A" stroke-width="5"/>
+  <rect x="12" y="10" width="160" height="22" fill="url(#hv)" stroke="#0A0A0A" stroke-width="5"/>
+  <rect x="12" y="168" width="160" height="22" fill="url(#hv)" stroke="#0A0A0A" stroke-width="5"/>
+  <polygon points="38,32 78,44 78,156 38,168" fill="url(#hv)" stroke="#0A0A0A" stroke-width="3"/>
+  <polygon points="120,26 84,108 107,108 72,184 160,97 136,97 165,26" fill="#B3FF2E" stroke="#0A0A0A" stroke-width="5"/>
+</g>
+
+<!-- ═══ ICON 2: Grid Globe  (220,0) ═══ -->
+<g transform="translate(220,0)">
+  <circle cx="100" cy="100" r="82" fill="white"/>
+  <g clip-path="url(#globe-clip)">
+    <line x1="18" y1="100" x2="182" y2="100" stroke="#0A0A0A" stroke-width="3"/>
+    <path d="M26,64 Q100,49 174,64" fill="none" stroke="#0A0A0A" stroke-width="2.5"/>
+    <path d="M26,136 Q100,151 174,136" fill="none" stroke="#0A0A0A" stroke-width="2.5"/>
+    <path d="M100,18 Q52,60 52,100 Q52,140 100,182" fill="none" stroke="#0A0A0A" stroke-width="2.5"/>
+    <line x1="100" y1="18" x2="100" y2="182" stroke="#0A0A0A" stroke-width="3"/>
+    <path d="M100,18 Q148,60 148,100 Q148,140 100,182" fill="none" stroke="#0A0A0A" stroke-width="2.5"/>
+  </g>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#0A0A0A" stroke-width="6"/>
+  <line x1="100" y1="70" x2="100" y2="130" stroke="#00DFFF" stroke-width="6"/>
+  <line x1="70" y1="100" x2="130" y2="100" stroke="#00DFFF" stroke-width="6"/>
+  <path d="M84,86 L84,80 L90,80" fill="none" stroke="#00DFFF" stroke-width="3"/>
+  <path d="M116,86 L116,80 L110,80" fill="none" stroke="#00DFFF" stroke-width="3"/>
+  <path d="M84,114 L84,120 L90,120" fill="none" stroke="#00DFFF" stroke-width="3"/>
+  <path d="M116,114 L116,120 L110,120" fill="none" stroke="#00DFFF" stroke-width="3"/>
+</g>
+
+<!-- ═══ ICON 3: Four-Stack Arrows  (440,0) ═══ -->
+<g transform="translate(440,0)">
+  <polygon points="8,18 136,18 136,4 182,38 136,72 136,58 8,58" fill="#0A0A0A"/>
+  <polygon points="28,82 142,82 142,69 186,96 142,123 142,110 28,110" fill="#B3FF2E" stroke="#0A0A0A" stroke-width="4"/>
+  <polygon points="8,128 120,128 120,118 158,140 120,162 120,152 8,152" fill="#0A0A0A"/>
+  <polygon points="26,166 132,166 132,155 172,178 132,201 132,189 26,189" fill="#00DFFF" stroke="#0A0A0A" stroke-width="4"/>
+</g>
+
+<!-- ═══ ICON 4: Key + Signature  (660,0) ═══ -->
+<g transform="translate(660,0)">
+  <rect x="14" y="22" width="70" height="70" fill="url(#hv)" stroke="#0A0A0A" stroke-width="5"/>
+  <rect x="28" y="36" width="42" height="42" fill="white" stroke="#0A0A0A" stroke-width="4"/>
+  <rect x="84" y="70" width="92" height="26" fill="url(#hv)" stroke="#0A0A0A" stroke-width="4"/>
+  <rect x="130" y="96" width="18" height="24" fill="url(#hv)" stroke="#0A0A0A" stroke-width="3"/>
+  <rect x="158" y="96" width="18" height="24" fill="url(#hv)" stroke="#0A0A0A" stroke-width="3"/>
+  <line x1="105" y1="148" x2="182" y2="184" stroke="#0A0A0A" stroke-width="14" stroke-linecap="square"/>
+  <line x1="105" y1="148" x2="182" y2="184" stroke="#B3FF2E" stroke-width="9" stroke-linecap="square"/>
+</g>
+
+<!-- ═══ ICON 5: Zero + Brackets  (0,220) ═══ -->
+<g transform="translate(0,220)">
+  <path d="M18,26 L18,44" stroke="#0A0A0A" stroke-width="5" stroke-linecap="square"/>
+  <path d="M18,26 L36,26" stroke="#0A0A0A" stroke-width="5" stroke-linecap="square"/>
+  <path d="M18,174 L18,156" stroke="#0A0A0A" stroke-width="5" stroke-linecap="square"/>
+  <path d="M18,174 L36,174" stroke="#0A0A0A" stroke-width="5" stroke-linecap="square"/>
+  <path d="M182,26 L182,44" stroke="#0A0A0A" stroke-width="5" stroke-linecap="square"/>
+  <path d="M182,26 L164,26" stroke="#0A0A0A" stroke-width="5" stroke-linecap="square"/>
+  <path d="M182,174 L182,156" stroke="#0A0A0A" stroke-width="5" stroke-linecap="square"/>
+  <path d="M182,174 L164,174" stroke="#0A0A0A" stroke-width="5" stroke-linecap="square"/>
+  <ellipse cx="100" cy="100" rx="60" ry="72" fill="url(#hv)" stroke="#0A0A0A" stroke-width="7"/>
+  <ellipse cx="100" cy="100" rx="32" ry="44" fill="white" stroke="#0A0A0A" stroke-width="5"/>
+  <line x1="24" y1="100" x2="176" y2="100" stroke="#00DFFF" stroke-width="8"/>
+</g>
+
+<!-- ═══ ICON 6: Ascending Bars + Chevron  (220,220) ═══ -->
+<g transform="translate(220,220)">
+  <line x1="10" y1="192" x2="190" y2="192" stroke="#0A0A0A" stroke-width="5"/>
+  <rect x="20" y="142" width="42" height="50" fill="url(#hv)" stroke="#0A0A0A" stroke-width="4"/>
+  <rect x="79" y="92" width="42" height="100" fill="url(#hv)" stroke="#0A0A0A" stroke-width="4"/>
+  <rect x="138" y="44" width="42" height="148" fill="url(#hv)" stroke="#0A0A0A" stroke-width="4"/>
+  <polyline points="130,38 159,12 188,38" fill="none" stroke="#B3FF2E" stroke-width="10" stroke-linejoin="miter" stroke-linecap="square"/>
+</g>
+
+<!-- ═══ ICON 7: Branching Node  (440,220) ═══ -->
+<g transform="translate(440,220)">
+  <line x1="100" y1="42" x2="46" y2="82" stroke="#0A0A0A" stroke-width="3"/>
+  <line x1="100" y1="42" x2="154" y2="82" stroke="#0A0A0A" stroke-width="3"/>
+  <line x1="46" y1="112" x2="24" y2="152" stroke="#0A0A0A" stroke-width="3"/>
+  <line x1="46" y1="112" x2="72" y2="152" stroke="#0A0A0A" stroke-width="3"/>
+  <line x1="154" y1="112" x2="128" y2="152" stroke="#0A0A0A" stroke-width="3"/>
+  <line x1="154" y1="112" x2="176" y2="152" stroke="#0A0A0A" stroke-width="3"/>
+  <rect x="80" y="10" width="40" height="32" fill="#B3FF2E" stroke="#0A0A0A" stroke-width="4"/>
+  <rect x="26" y="82" width="40" height="30" fill="#00DFFF" stroke="#0A0A0A" stroke-width="4"/>
+  <rect x="134" y="82" width="40" height="30" fill="#00DFFF" stroke="#0A0A0A" stroke-width="4"/>
+  <rect x="8" y="152" width="32" height="24" fill="#0A0A0A"/>
+  <rect x="56" y="152" width="32" height="24" fill="#0A0A0A"/>
+  <rect x="112" y="152" width="32" height="24" fill="#0A0A0A"/>
+  <rect x="160" y="152" width="32" height="24" fill="#0A0A0A"/>
+</g>
+
+<!-- ═══ ICON 8: Divided Vault  (660,220) ═══ -->
+<g transform="translate(660,220)">
+  <rect x="8" y="8" width="184" height="184" fill="#0A0A0A"/>
+  <rect x="16" y="16" width="168" height="168" fill="#0A0A0A"/>
+  <rect x="24" y="24" width="152" height="152" fill="white"/>
+  <rect x="26" y="26" width="68" height="148" fill="#B3FF2E"/>
+  <rect x="106" y="26" width="68" height="148" fill="#00DFFF"/>
+  <rect x="94" y="24" width="12" height="152" fill="#0A0A0A"/>
+  <rect x="8" y="8" width="184" height="184" fill="none" stroke="#0A0A0A" stroke-width="6"/>
+  <rect x="24" y="24" width="152" height="152" fill="none" stroke="#0A0A0A" stroke-width="3"/>
+  <rect x="10" y="50" width="16" height="22" fill="white" stroke="#0A0A0A" stroke-width="3"/>
+  <rect x="10" y="128" width="16" height="22" fill="white" stroke="#0A0A0A" stroke-width="3"/>
+  <circle cx="18" cy="61" r="3.5" fill="#0A0A0A"/>
+  <circle cx="18" cy="139" r="3.5" fill="#0A0A0A"/>
+</g>
+
+</svg>

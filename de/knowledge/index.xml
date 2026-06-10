@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wissensdatenbank — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/de/knowledge/</link>
+    <description>Alles, was Sie über paype.cc wissen müssen — durchsuchen Sie FAQ, Glossar, Anleitungen, Dokumentation, Blog und Roadmap. Ein Ort für jede Antwort.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:20 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/de/knowledge/index.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Anleitungen</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/knowledge/guides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/knowledge/guides/</guid>
+      <description>Schritt-für-Schritt-Anleitungen für paype.cc: Konto eröffnen, erste Zahlung senden, Unterkonten einrichten, Vermittler-Link erstellen und mehr.</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/knowledge/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/knowledge/blog/</guid>
+      <description>Produkt-Updates, Gedanken rund ums Bezahlen, Krypto-Politik und Einblicke hinter die Kulissen des paype-Teams. RSS-Feed verfügbar.</description>
+    </item>
+    
+    <item>
+      <title>Dokumentation</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/knowledge/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/knowledge/docs/</guid>
+      <description>Plattformdokumentation für paype.cc — API-Referenz, Sicherheitsarchitektur, Compliance-Programmdetails und technische Spezifikationen.</description>
+    </item>
+    
+    <item>
+      <title>Glossar</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/</guid>
+      <description>Klare Definitionen. Kein Banker-Jargon. Gilt für alle paype.cc-Nutzer.</description>
+    </item>
+    
+  </channel>
+</rss>

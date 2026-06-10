@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hrbrlife.github.io/temp_paype_site/sitemap.xml

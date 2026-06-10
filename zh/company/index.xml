@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>公司 — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/zh/company/</link>
+    <description>关于 paype.cc — 您的资金管道。一家注册货币服务企业。联系我们，了解我们的团队。适用于所有 paype.cc 用户。</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:21 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/zh/company/index.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>关于 paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/company/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/company/about/</guid>
+      <description>paype.cc 让全球每一家企业即时获得所有资金流动方式——无需繁琐审批和文书。FinCEN 注册 MSB。</description>
+    </item>
+    
+    <item>
+      <title>联系方式</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/company/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/company/contact/</guid>
+      <description>联系 paype.cc — 联系表单、Telegram @paype、WhatsApp 或电子邮件。用于支持、销售、法律事务，或只是想打个招呼。</description>
+    </item>
+    
+  </channel>
+</rss>

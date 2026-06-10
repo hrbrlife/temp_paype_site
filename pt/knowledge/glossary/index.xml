@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Glossario — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/</link>
+    <description>Definicoes claras. Sem jargao. Aplica-se a todos os usuários da paype.cc.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:21 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/index.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>ACH — Automated Clearing House</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/ach/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/ach/</guid>
+      <description>ACH é a rede eletrônica de pagamentos interbancários dos EUA. Gratuito no paype, liquidado em 1–2 dias úteis.</description>
+    </item>
+    
+    <item>
+      <title>AML — Combate à Lavagem de Dinheiro</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/aml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/aml/</guid>
+      <description>As leis e procedimentos que impedem criminosos de disfarçar fundos ilícitos. A paype realiza triagem AML contínua.</description>
+    </item>
+    
+    <item>
+      <title>BSA — Lei de Sigilo Bancário</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/bsa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/bsa/</guid>
+      <description>A principal lei de combate à lavagem de dinheiro dos EUA. A paype opera sob os requisitos da BSA por meio de seu registro no FinCEN.</description>
+    </item>
+    
+    <item>
+      <title>FinCEN — Financial Crimes Enforcement Network</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/fincen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/fincen/</guid>
+      <description>Uma agência do Tesouro dos EUA e o principal regulador das Empresas de Serviços Monetários nos Estados Unidos.</description>
+    </item>
+    
+    <item>
+      <title>Trilha de auditoria criptográfica</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/cryptographic-audit-trail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/pt/knowledge/glossary/cryptographic-audit-trail/</guid>
+      <description>Um registro à prova de adulteração de cada transação na sua conta. Cada entrada carrega uma assinatura criptográfica que você pode verificar de forma independente.</description>
+    </item>
+    
+  </channel>
+</rss>

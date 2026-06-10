@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Changelog — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/changelog/</link>
+    <description>Product updates and release notes for paype.cc — what&#39;s new, what changed, what&#39;s next. RSS feed available.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:20 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/changelog/index.xml" rel="self" type="application/rss+xml"/>
+    
+  </channel>
+</rss>

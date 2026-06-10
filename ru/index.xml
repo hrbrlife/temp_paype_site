@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>paype.cc — Все способы получать платежи. Все способы платить. — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/ru/</link>
+    <description>Откройте бизнес-счёт за минуты — где бы ни находилась ваша компания — и получите доступ ко всем платёжным каналам: ACH, SWIFT, SEPA, карты, крипто. Без ежемесячной платы. Без кошмарной бумажной волокиты.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:21 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/ru/index.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>ACH — Automated Clearing House</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/ach/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/ach/</guid>
+      <description>ACH — это американская электронная межбанковская платежная сеть. Бесплатно на paype, зачисление за 1–2 рабочих дня.</description>
+    </item>
+    
+    <item>
+      <title>AML — Борьба с отмыванием денег</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/aml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/aml/</guid>
+      <description>Законы и процедуры, которые не позволяют преступникам маскировать незаконные средства. paype проводит непрерывный AML-скрининг.</description>
+    </item>
+    
+    <item>
+      <title>BSA — Закон о банковской тайне</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/bsa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/bsa/</guid>
+      <description>Основной закон США по борьбе с отмыванием денег. paype работает в соответствии с требованиями BSA через свою регистрацию в FinCEN.</description>
+    </item>
+    
+    <item>
+      <title>FinCEN — Сеть по борьбе с финансовыми преступлениями</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/fincen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/fincen/</guid>
+      <description>Бюро Министерства финансов США и основной регулятор предприятий денежных переводов (Money Services Businesses) в Соединённых Штатах.</description>
+    </item>
+    
+    <item>
+      <title>Криптографический аудит-трейл</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/cryptographic-audit-trail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/cryptographic-audit-trail/</guid>
+      <description>Защищённая от подделки запись каждой транзакции на вашем счёте. Каждая запись содержит криптографическую подпись, которую вы можете самостоятельно проверить.</description>
+    </item>
+    
+  </channel>
+</rss>

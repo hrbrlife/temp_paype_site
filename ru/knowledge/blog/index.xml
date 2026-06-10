@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Блог — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/blog/</link>
+    <description>Обновления продукта, размышления о платежах, крипто-политика и закулисье команды paype. Доступна RSS-лента.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:21 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/ru/knowledge/blog/index.xml" rel="self" type="application/rss+xml"/>
+    
+  </channel>
+</rss>

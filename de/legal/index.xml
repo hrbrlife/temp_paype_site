@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rechtliches — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/de/legal/</link>
+    <description>paype.cc Rechtsdokumente — Nutzungsbedingungen, Datenschutzrichtlinie, Sailor Beware Risikoaufklärung, Compliance-Rahmenwerk und alle regulatorischen Hinweise.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:20 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/de/legal/index.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>API- und Entwicklerbedingungen</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/api-terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/api-terms/</guid>
+      <description>Nutzungsbedingungen fur paype.cc REST API, MCP Server und Telegram Bot. Zugriff, Ratenlimits, verbotene Nutzungen und Verantwortlichkeiten.</description>
+    </item>
+    
+    <item>
+      <title>CIP-Mitteilung - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/cip-notice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/cip-notice/</guid>
+      <description>Kundenidentifikationsprogramm. Gilt für alle paype.cc-Nutzer.</description>
+    </item>
+    
+    <item>
+      <title>Compliance - Rechtsstruktur</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/compliance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/compliance/</guid>
+      <description>Wie paype.cc strukturiert ist - registriertes MSB unter FinCEN, Montana Series LLC, das Whitelabel-Partnerserien-Modell und was es für Sie bedeutet.</description>
+    </item>
+    
+    <item>
+      <title>Cookie-Richtlinie - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/cookie-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/cookie-policy/</guid>
+      <description>Minimale Cookies, kein Drittanbieter-Tracking. Gilt für alle paype.cc-Nutzer.</description>
+    </item>
+    
+    <item>
+      <title>Datenschutzerklärung</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/privacy/</guid>
+      <description>Datenschutz- und Datenschutzrichtlinie von paype.cc. Wir erfassen nur, was für die Bereitstellung von Gelddienstleistungen und die Einhaltung von US-Recht erforderlich ist.</description>
+    </item>
+    
+    <item>
+      <title>Datenverarbeitung fur Geschaftskunden.atenverarbeitungsvereinbarung - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/data-processing-agreement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/data-processing-agreement/</guid>
+      <description>Datenverarbeitung fur Geschaftskunden. Gilt für alle paype.cc-Nutzer.</description>
+    </item>
+    
+    <item>
+      <title>E-SIGN-Zustimmung - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/esign-consent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/esign-consent/</guid>
+      <description>Zustimmung zu elektronischen Offenlegungen. Gilt für alle paype.cc-Nutzer.</description>
+    </item>
+    
+    <item>
+      <title>Empfehlungsbedingungen - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/referral-terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/referral-terms/</guid>
+      <description>10% direkt + 5% indirekt. EU/EWR-Ausschluss. Gilt für alle paype.cc-Nutzer.</description>
+    </item>
+    
+    <item>
+      <title>Fehlerbehebung - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/error-resolution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/error-resolution/</guid>
+      <description>Transaktionsfehler melden. Gilt für alle paype.cc-Nutzer.</description>
+    </item>
+    
+    <item>
+      <title>Karteninhaberbedingungen - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/cardholder-terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/cardholder-terms/</guid>
+      <description>Bedingungen fur virtuelle und physische Karten. Gilt für alle paype.cc-Nutzer.</description>
+    </item>
+    
+    <item>
+      <title>Kundenspezifische Dienste - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/custom-services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/custom-services/</guid>
+      <description>Smart Contracts, VIP OTC und maSSgeschneiderte Dienste.</description>
+    </item>
+    
+    <item>
+      <title>Nutzungsbedingungen</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/terms/</guid>
+      <description>Bedingungen für die Nutzung von paype.cc - einer Gelddienstleistungsplattform, betrieben als Whitelabel-Partnerserie von CCA.SH Money Services (US) Series LLC.</description>
+    </item>
+    
+    <item>
+      <title>Richtlinie zur akzeptablen Nutzung - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/acceptable-use/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/acceptable-use/</guid>
+      <description>Was Sie tun konnen und was nicht. Gilt für alle paype.cc-Nutzer.</description>
+    </item>
+    
+    <item>
+      <title>Sailor Beware - Risikooffenlegung</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/sailor-beware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/sailor-beware/</guid>
+      <description>paype.cc ist eine experimentelle Gelddienstleistungsplattform. Verstehen Sie die inhärenten Risiken, bevor Sie in See stechen. Ehrliche Offenlegung, kein Kleingedrucktes.</description>
+    </item>
+    
+    <item>
+      <title>Unterkonto-Bedingungen - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/subaccount-terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/subaccount-terms/</guid>
+      <description>Erstellung, Berechtigungen und Eigentum. Gilt für alle paype.cc-Nutzer.</description>
+    </item>
+    
+    <item>
+      <title>Verfugbarkeit von Geldern - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/legal/funds-availability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/legal/funds-availability/</guid>
+      <description>Wann Ihre Einzahlungen verfugbar sind. Gilt für alle paype.cc-Nutzer.</description>
+    </item>
+    
+  </channel>
+</rss>

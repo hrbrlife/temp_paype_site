@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>法律文件 — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/</link>
+    <description>paype.cc 法律文件——服务条款、隐私政策、Sailor Beware 风险披露、合规框架及所有监管通知。</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:21 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/zh/legal/index.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>API 与开发者条款</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/api-terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/api-terms/</guid>
+      <description>paype.cc REST API、MCP Server 和 Telegram Bot 使用条款。访问、速率限制、禁止使用及责任。</description>
+    </item>
+    
+    <item>
+      <title>CIP 通知 - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/cip-notice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/cip-notice/</guid>
+      <description>客户身份识别计划。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>Cookie 政策 - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/cookie-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/cookie-policy/</guid>
+      <description>最少 Cookie，无追踪。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>Sailor Beware - 风险披露</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/sailor-beware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/sailor-beware/</guid>
+      <description>paype.cc 是一个实验性货币服务平台。在启航前了解固有风险。诚实披露，无小字条款。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>持卡人条款 - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/cardholder-terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/cardholder-terms/</guid>
+      <description>虚拟卡和实体卡条款。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>错误解决 - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/error-resolution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/error-resolution/</guid>
+      <description>如何报告交易错误。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>电子签名同意 - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/esign-consent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/esign-consent/</guid>
+      <description>同意电子披露。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>定制服务 - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/custom-services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/custom-services/</guid>
+      <description>智能合约、VIP OTC 及定制服务。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>服务条款</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/terms/</guid>
+      <description>管理 paype.cc 使用的条款 - 一个作为 CCA.SH Money Services (US) Series LLC 白标合作伙伴系列运营的货币服务平台。</description>
+    </item>
+    
+    <item>
+      <title>合规 - 法律结构</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/compliance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/compliance/</guid>
+      <description>paype.cc 的结构 — 在 FinCEN 注册的 MSB、蒙大拿州系列有限责任公司、白标合作伙伴系列模式及其对您的意义。</description>
+    </item>
+    
+    <item>
+      <title>可接受使用政策 - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/acceptable-use/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/acceptable-use/</guid>
+      <description>您可以和不可以做什么。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>数据处理协议 - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/data-processing-agreement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/data-processing-agreement/</guid>
+      <description>代表企业客户处理个人数据。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>推荐条款 - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/referral-terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/referral-terms/</guid>
+      <description>10% 直接 + 5% 间接。欧盟/欧洲经济区排除。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>隐私政策</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/privacy/</guid>
+      <description>paype.cc 隐私和数据保护政策。我们仅收集提供货币服务和遵守美国法律所必需的信息。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>资金可用性 - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/funds-availability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/funds-availability/</guid>
+      <description>您的存款何时可用。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>子账户条款 - paype.cc</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/legal/subaccount-terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/legal/subaccount-terms/</guid>
+      <description>创建、权限及所有权。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>paype.cc — Jede Art zu kassieren. Jede Art auszuzahlen. — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/de/</link>
+    <description>Eröffnen Sie ein Geschäftskonto in Minuten — wo auch immer Ihr Unternehmen ansässig ist — und schalten Sie alle Zahlungswege frei: ACH, SWIFT, SEPA, Karten, Krypto. Keine monatlichen Gebühren. Kein Albtraum-Papierkram.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:20 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/de/index.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>ACH — Automated Clearing House</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/ach/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/ach/</guid>
+      <description>ACH ist das US-amerikanische elektronische Bank-zu-Bank-Zahlungsnetzwerk. Kostenlos auf paype, Abwicklung in 1–2 Werktagen.</description>
+    </item>
+    
+    <item>
+      <title>AML — Geldwäschebekämpfung</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/aml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/aml/</guid>
+      <description>Die Gesetze und Verfahren, die Kriminelle daran hindern, illegale Gelder zu verschleiern. paype führt eine kontinuierliche AML-Überprüfung durch.</description>
+    </item>
+    
+    <item>
+      <title>BSA — Bank Secrecy Act</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/bsa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/bsa/</guid>
+      <description>Das wichtigste US-Gesetz zur Geldwäschebekämpfung. paype unterliegt den BSA-Anforderungen im Rahmen seiner FinCEN-Registrierung.</description>
+    </item>
+    
+    <item>
+      <title>FinCEN — Netzwerk zur Bekämpfung von Finanzkriminalität</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/fincen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/fincen/</guid>
+      <description>Eine Behörde des US-Finanzministeriums und die primäre Aufsichtsbehörde für Money Services Businesses in den Vereinigten Staaten.</description>
+    </item>
+    
+    <item>
+      <title>Kryptografischer Prüfpfad</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/cryptographic-audit-trail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/de/knowledge/glossary/cryptographic-audit-trail/</guid>
+      <description>Ein manipulationssicherer Nachweis jeder Transaktion auf Ihrem Konto. Jeder Eintrag trägt eine kryptografische Signatur, die Sie unabhängig überprüfen können.</description>
+    </item>
+    
+  </channel>
+</rss>

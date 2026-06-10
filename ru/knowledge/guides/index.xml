@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Руководства — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/guides/</link>
+    <description>Пошаговые инструкции для paype.cc: откройте счёт, отправьте первый платёж, создайте субсчета, настройте реферальную ссылку и многое другое.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:21 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/ru/knowledge/guides/index.xml" rel="self" type="application/rss+xml"/>
+    
+  </channel>
+</rss>

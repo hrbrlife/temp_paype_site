@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>更新日志 - paype.cc — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/zh/changelog/</link>
+    <description>新功能、错误修复和改进。订阅RSS.获取更新。适用于所有 paype.cc 用户。</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:21 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/zh/changelog/index.xml" rel="self" type="application/rss+xml"/>
+    
+  </channel>
+</rss>

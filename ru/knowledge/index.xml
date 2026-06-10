@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>База знаний — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/</link>
+    <description>Всё, что нужно знать о paype.cc — поиск по FAQ, глоссарию, руководствам, документации, блогу и дорожной карте. Одно место для каждого ответа.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:21 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/ru/knowledge/index.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Блог</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/blog/</guid>
+      <description>Обновления продукта, размышления о платежах, крипто-политика и закулисье команды paype. Доступна RSS-лента.</description>
+    </item>
+    
+    <item>
+      <title>Глоссарий</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/glossary/</guid>
+      <description>Чёткие определения. Распространяется на всех пользователей paype.cc.</description>
+    </item>
+    
+    <item>
+      <title>Документация</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/docs/</guid>
+      <description>Платформенная документация paype.cc — API-справочник, архитектура безопасности, информация о программе комплаенс и технические спецификации.</description>
+    </item>
+    
+    <item>
+      <title>Руководства</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/guides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/ru/knowledge/guides/</guid>
+      <description>Пошаговые инструкции для paype.cc: откройте счёт, отправьте первый платёж, создайте субсчета, настройте реферальную ссылку и многое другое.</description>
+    </item>
+    
+  </channel>
+</rss>

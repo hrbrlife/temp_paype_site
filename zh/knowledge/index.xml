@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>知识库 — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/</link>
+    <description>您需要了解的关于 paype.cc 的一切 — 搜索常见问题、术语表、指南、文档、博客和路线图。每个答案，尽在一处。</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:21 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/zh/knowledge/index.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>博客</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/blog/</guid>
+      <description>产品更新、支付思考、加密货币政策，以及 paype 团队的幕后故事。支持 RSS 订阅。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>术语表</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/</guid>
+      <description>清晰定义。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>文档</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/docs/</guid>
+      <description>paype.cc 平台文档 — API 参考、安全架构、合规计划详情及技术规格。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>指南</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/guides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/guides/</guid>
+      <description>paype.cc 的分步指南：开设账户、发送第一笔付款、创建子账户、设置推荐链接等。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+  </channel>
+</rss>

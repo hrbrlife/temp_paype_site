@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>术语表 — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/</link>
+    <description>清晰定义。适用于所有 paype.cc 用户。</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:21 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/index.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>ACH — 自动清算中心</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/ach/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/ach/</guid>
+      <description>ACH 是美国电子银行间支付网络。在 paype 上免费使用，1–2 个工作日结算。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>AML — 反洗钱</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/aml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/aml/</guid>
+      <description>防止犯罪分子掩饰非法资金的法律和程序。paype 对所有账户进行持续 AML 筛查。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>BSA — 银行保密法</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/bsa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/bsa/</guid>
+      <description>美国主要的反洗钱法律。paype 通过其在 FinCEN 的注册，遵守 BSA 的相关要求。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>FinCEN — 金融犯罪执法网络</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/fincen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/fincen/</guid>
+      <description>美国财政部下属机构，是美国货币服务业务的主要监管机构。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+    <item>
+      <title>加密审计追踪</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/cryptographic-audit-trail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/zh/knowledge/glossary/cryptographic-audit-trail/</guid>
+      <description>一种防篡改的记录，保存您账户上的每一笔交易。每条记录都带有可独立验证的加密签名。适用于所有 paype.cc 用户。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Base de Conocimientos — paype.cc</title>
+    <link>https://hrbrlife.github.io/temp_paype_site/es/knowledge/</link>
+    <description>Todo lo que necesitas saber sobre paype.cc — busca en FAQ, glosario, guías, documentación, blog y hoja de ruta. Un solo lugar para cada respuesta.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jun 2026 16:04:20 +0400</lastBuildDate>
+    <atom:link href="https://hrbrlife.github.io/temp_paype_site/es/knowledge/index.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/es/knowledge/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/es/knowledge/blog/</guid>
+      <description>Actualizaciones de producto, reflexiones sobre pagos, política cripto y contenido entre bastidores del equipo de paype. Feed RSS disponible.</description>
+    </item>
+    
+    <item>
+      <title>Documentación</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/es/knowledge/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/es/knowledge/docs/</guid>
+      <description>Documentación de la plataforma para paype.cc — referencia de API, arquitectura de seguridad, detalles del programa de cumplimiento normativo y especificaciones técnicas.</description>
+    </item>
+    
+    <item>
+      <title>Glosario</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/es/knowledge/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/es/knowledge/glossary/</guid>
+      <description>Definiciones claras de cada termino que encontrara en paype.cc. Sin jerga bancaria — solo explicaciones claras.</description>
+    </item>
+    
+    <item>
+      <title>Guías</title>
+      <link>https://hrbrlife.github.io/temp_paype_site/es/knowledge/guides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hrbrlife.github.io/temp_paype_site/es/knowledge/guides/</guid>
+      <description>Tutoriales paso a paso para paype.cc: abre tu cuenta, envía tu primer pago, crea subcuentas, configura tu enlace de introducción y más.</description>
+    </item>
+    
+  </channel>
+</rss>

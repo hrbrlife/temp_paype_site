@@ -1,0 +1,7 @@
+/* BROADSHEET: all content page styles are in main.css. This file is intentionally minimal. */
+
+/* Slight tweak: content-wrap links get a subtle lime underline on hover for legibility */
+.content-wrap a:hover {
+    text-decoration-color: var(--paype-lime);
+    opacity: 1;
+}
