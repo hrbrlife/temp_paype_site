@@ -538,10 +538,15 @@ nav {
     padding: 8px 12px;
     transition: background 0.1s, color 0.1s;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.nav-links a:active {
+    background: var(--paype-lime);
+    color: var(--paype-ink);
 }
 .nav-links a:hover {
-    background: var(--paype-ink);
-    color: var(--color-text-invert);
+    background: var(--paype-lime);
+    color: var(--paype-ink);
 }
 .nav-links a.active {
     box-shadow: inset 0 -3px 0 0 var(--paype-lime);
@@ -1627,7 +1632,6 @@ body.no-mobile-bar { padding-bottom: 0 !important; }
     padding-bottom: max(10px, env(safe-area-inset-bottom));
 }
 @media (min-width: 768px) { .sticky-cta { display: none; } }
-body.has-sticky { padding-bottom: 74px; }
 .sticky-reassurance {
     font-family: var(--font-ui);
     font-size: 11px; color: var(--color-text-muted);
@@ -2424,7 +2428,7 @@ footer .label { color: #9A948A; }
     display: flex; align-items: center; gap: 4px;
 }
 .nav-dropdown-toggle:hover {
-    background: var(--paype-ink); color: var(--color-text-invert);
+    background: var(--paype-lime); color: var(--paype-ink);
 }
 .nav-dropdown-menu {
     display: none; position: absolute; top: 100%; left: 0;
