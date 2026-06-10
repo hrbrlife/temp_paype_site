@@ -3775,3 +3775,14 @@ a.trust-badge-item:hover .trust-badge-label { color: var(--paype-ink); }
     margin-bottom: 10px;
 }
 .kb-empty p { font-size: 0.9rem; }
+
+/* Responsive 2-column grid — stacks to 1 on mobile */
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+@media (max-width: 600px) {
+    .grid-2col { grid-template-columns: 1fr; }
+}
