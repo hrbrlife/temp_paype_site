@@ -129,7 +129,7 @@
       mainEl.style.opacity = '1';
 
       // Scroll to top after page swap
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 
       // Update nav language links + active states for new URL
       updateNavAfterSPA(url);
@@ -166,7 +166,7 @@
     setTimeout(function(){
       mainEl.innerHTML = state.html;
       mainEl.style.opacity = '1';
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       updateNavAfterSPA(state.url);
       window.dispatchEvent(new CustomEvent('paype:pagechange', {detail: {url: state.url}}));
     }, 150);
