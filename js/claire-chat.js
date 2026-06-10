@@ -75,7 +75,7 @@
     },
     {
       qs: ['kyc', 'verify', 'id', 'identity', 'document', 'open account', 'sign up', 'onboarding'],
-      a: 'Download the app, snap your government-issued ID and a selfie. Automated KYC — most accounts verified in <strong>minutes</strong>. It\'s free and you only do it once. Your verified identity travels with you across paype services. <a href="/get-started/">Open your account →</a>'
+      a: 'Download the app, snap your government-issued ID and a selfie. Automated KYC — most accounts verified in <strong>minutes</strong>. It\'s free and you only do it once. Your verified identity travels with you across paype services. <a href="https://pay.paype.cc" data-open-account>Open your account →</a>'
     },
     {
       qs: ['crypto', 'bitcoin', 'btc', 'eth', 'usdt', 'usdc', 'stablecoin', 'swap'],

@@ -535,7 +535,7 @@ function renderResult() {
   // CTA — passes state to Open Account
   if (canOpen) {
     h += '<div style="margin-top:32px;text-align:center">'+
-      '<a href="/get-started/?from=forme" class="btn btn-lime btn-lg" style="font-size:1.2rem;padding:20px 48px">Open your account — free</a>'+
+      '<a href="https://pay.paype.cc" class="btn btn-lime btn-lg" style="font-size:1.2rem;padding:20px 48px" data-open-account>Open your account — free</a>'+
       '<p style="margin-top:12px;font-size:0.9rem;color:var(--color-text-secondary)">Your answers are saved — the account opening flow will skip what you\'ve already told us.</p>'+
       '</div>';
   } else {
