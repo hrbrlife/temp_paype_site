@@ -25,6 +25,14 @@
  * Detected via: navigator.brave (async) + navigator.userAgentData.brands (Client Hints).
  * Both are started at page load so the flag is ready before any tap.
  *
+ * Promo/coupon codes:
+ *   ?UPGRADECODEC3B589           — valueless single param  (key IS the code)
+ *   ?code=UPGRADECODEC3B589      — named param
+ *   ?promo=X  ?ref=X  ?coupon=X — aliases
+ *   Code is stored in localStorage (survives tab-close, multi-page browsing).
+ *   URL is silently cleaned via history.replaceState immediately after extraction.
+ *   On Open Account → re-injected as ?code=X on the destination URL.
+ *
  * All [data-open-account] elements handled via event delegation (dynamic-safe).
  *
  * Research sources (2024-2025):
@@ -37,6 +45,49 @@
   'use strict';
 
   var ACCOUNT_URL = 'https://pay.paype.cc';
+  var PROMO_KEY   = 'paype_promo';
+
+  // ── Promo code extraction & URL cleaning ──────────────────────
+  // Runs once at page load. Supports:
+  //   ?MYCODE          → valueless param; the key itself is the code
+  //   ?code=MYCODE     → canonical named param
+  //   ?promo/ref/coupon=MYCODE → aliases
+  // After extraction the query string is stripped from the visible URL.
+  (function extractPromo() {
+    var search = window.location.search;
+    if (!search || search.length < 3) return;
+
+    var params;
+    try { params = new URLSearchParams(search); } catch (e) { return; }
+
+    var code = params.get('code') || params.get('promo') ||
+               params.get('ref') || params.get('coupon');
+
+    // Valueless single-param style: ?UPGRADECODEC3B589
+    if (!code) {
+      var entries = [];
+      params.forEach(function (v, k) { entries.push([k, v]); });
+      if (entries.length === 1 && entries[0][1] === '') {
+        code = entries[0][0];
+      }
+    }
+
+    if (!code) return;
+
+    try { localStorage.setItem(PROMO_KEY, code); } catch (e) { /* private-mode */ }
+
+    // Strip query string from URL bar without reloading
+    var clean = window.location.pathname + (window.location.hash || '');
+    try { history.replaceState(null, '', clean); } catch (e) { /* old browser */ }
+  })();
+
+  // Returns the destination URL, appending ?code=X if a promo is stored.
+  function getAccountURL() {
+    var code;
+    try { code = localStorage.getItem(PROMO_KEY); } catch (e) { code = null; }
+    if (code) return ACCOUNT_URL + '?code=' + encodeURIComponent(code);
+    return ACCOUNT_URL;
+  }
   var ua = navigator.userAgent || '';
 
   // ── Platform ──────────────────────────────────────────────────
@@ -147,7 +198,7 @@
     isInApp: isInApp, inAppName: inAppName, inAppSignals: IA,
     isChromeAndroid: isChromeAndroid, isEdgeAndroid: isEdgeAndroid,
     get isBrave() { return isBraveMobile; },
-    accountURL: ACCOUNT_URL
+    get accountURL() { return getAccountURL(); }
   };
 
   // ── Core handler ──────────────────────────────────────────────
@@ -156,7 +207,7 @@
 
     // ① Desktop or running as installed PWA — navigate directly
     if (!isMobile || isStandalone) {
-      window.location.href = ACCOUNT_URL;
+      window.location.href = getAccountURL();
       return;
     }
 
@@ -199,12 +250,12 @@
     //    iOS 16.4+: all real browsers support Add to Home Screen via Share sheet.
     //    No redirect needed — navigate directly.
     if (isIOS) {
-      window.location.href = ACCOUNT_URL;
+      window.location.href = getAccountURL();
       return;
     }
 
     // ⑤ Chrome / Edge on Android — navigate
-    window.location.href = ACCOUNT_URL;
+    window.location.href = getAccountURL();
   }
 
   // ── Intent helper ─────────────────────────────────────────────
@@ -212,10 +263,11 @@
   // fallback: called after 1.4s if the intent was not handled.
   // MUST be called from a user-gesture handler (click) — Chrome blocks intent:// otherwise.
   function intentTo(pkg, fallback) {
-    var base = ACCOUNT_URL.replace(/^https?:\/\//, '');
+    var dest = getAccountURL();
+    var base = dest.replace(/^https?:\/\//, '');
     var intent = 'intent://' + base + '#Intent;scheme=https;' +
       (pkg ? 'package=' + pkg + ';' : '') +
-      'S.browser_fallback_url=' + encodeURIComponent(ACCOUNT_URL) + ';end';
+      'S.browser_fallback_url=' + encodeURIComponent(dest) + ';end';
     window.location.href = intent;
     setTimeout(fallback, 1400);
   }
@@ -224,6 +276,7 @@
   function showOverlay(opts) {
     if (document.getElementById('paype-breakout')) return;
 
+    var dest = getAccountURL();
     var el = document.createElement('div');
     el.id = 'paype-breakout';
     el.setAttribute('role', 'dialog');
@@ -235,7 +288,7 @@
       '  <p class="pb-title">' + opts.title + '</p>' +
       '  <p class="pb-body">' + opts.body + '</p>' +
       '  <p class="pb-inst">' + opts.inst + '</p>' +
-      '  <button class="pb-copy" data-url="' + ACCOUNT_URL + '">Copy link</button>' +
+      '  <button class="pb-copy" data-url="' + dest + '">Copy link</button>' +
       '  <button class="pb-dismiss">Dismiss</button>' +
       '</div>';
 
@@ -258,14 +311,14 @@
       var btn = this;
       var done = function () { btn.textContent = '✓ Copied!'; };
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(ACCOUNT_URL).then(done).catch(function () { fallbackCopy(); done(); });
-      } else { fallbackCopy(); done(); }
+        navigator.clipboard.writeText(dest).then(done).catch(function () { fallbackCopy(dest); done(); });
+      } else { fallbackCopy(dest); done(); }
     });
   }
 
-  function fallbackCopy() {
+  function fallbackCopy(text) {
     var ta = document.createElement('textarea');
-    ta.value = ACCOUNT_URL;
+    ta.value = text;
     ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
     document.body.appendChild(ta);
     ta.focus(); ta.select();
