@@ -1,15 +1,17 @@
 /**
  * paype.cc — Open Account routing.
  *
- * Detects: Desktop | iOS | Android, Real browser | In-app browser, Standalone PWA.
- * Behaviour:
- *   Desktop / PWA standalone  →  same-tab navigation to ACCOUNT_URL
- *   Mobile real browser       →  same-tab navigation (PWA install prompt works)
- *   Mobile in-app browser     →  Android: Chrome intent URI (breakout)
- *                                iOS:     overlay with "Open in Safari" instructions
+ * Detection matrix (evaluated in order):
+ *   Desktop / PWA standalone    →  same-tab → ACCOUNT_URL
+ *   Mobile in-app browser       →  breakout: Android intent:// + overlay, iOS overlay
+ *   Android non-Chrome          →  intent targeting Chrome + overlay fallback
+ *     (incl. Brave, Samsung, Firefox, Opera, Edge, DDG, UC…)
+ *   iOS non-Safari              →  overlay "Open in Safari"
+ *     (incl. Chrome for iOS, Firefox iOS, Edge iOS, DDG…)
+ *   Correct mobile browser      →  same-tab → ACCOUNT_URL  (PWA install works)
  *
- * All elements with [data-open-account] are handled via event delegation,
- * so dynamically-injected buttons work automatically.
+ * Brave on Android spoofs Chrome UA — detected via navigator.brave (async).
+ * All [data-open-account] elements handled via event delegation (dynamic-safe).
  */
 (function () {
   'use strict';
@@ -29,7 +31,6 @@
   );
 
   // ── In-app browser fingerprints ───────────────────────────────
-  // UA tokens that reliably indicate a named in-app WebView
   var IA = {
     facebook:  /FBAN|FBAV|FB_IAB|FBIOS|FB4A|FBDV/i.test(ua),
     instagram: /Instagram/i.test(ua),
@@ -45,11 +46,8 @@
     whatsapp:  /WhatsApp/i.test(ua),
     discord:   /Discord/i.test(ua),
   };
-
-  // Generic Android WebView: 'wv' token in UA (absent from real Chrome/Firefox/Samsung)
-  // e.g. "... Mobile Safari/537.36 (wv)"
-  var isAndroidWV = isAndroid && /\bwv\b/.test(ua) && !/SamsungBrowser|OPR\/|EdgA\//i.test(ua);
-
+  // Generic Android WebView ('wv' token, absent from real standalone browsers)
+  var isAndroidWV = isAndroid && /\bwv\b/.test(ua);
   var isInApp = isAndroidWV || Object.keys(IA).some(function (k) { return IA[k]; });
 
   var inAppName = (function () {
@@ -69,58 +67,113 @@
     return 'this app';
   })();
 
-  // Expose for debugging and other modules
+  // ── Primary browser detection ─────────────────────────────────
+  // iOS Safari: absence of all known iOS-wrapper markers
+  // (CriOS=Chrome, FxiOS=Firefox, EdgiOS=Edge, OPiOS=Opera, DDG, Brave etc.)
+  var isSafariIOS = isIOS && !isInApp &&
+    !/CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo|Brave/i.test(ua);
+
+  // Android Chrome: has Chrome/ token AND none of the known non-Chrome UA markers.
+  // Brave spoofs as Chrome (no UA marker) — caught separately via navigator.brave.
+  var isChromeAndroid = isAndroid && !isInApp &&
+    /Chrome\/\d/.test(ua) &&
+    !/SamsungBrowser|OPR\/|EdgA\/|Firefox|DuckDuckGo|UCBrowser|YaBrowser|Brave/i.test(ua);
+
+  // Brave detection: navigator.brave exists in Brave (Chrome-spoof).
+  // isBrave.isBrave() is async in modern Brave; we kick it off at page load
+  // so the flag is set long before any user click.
+  var isBraveMobile = false;
+  if (isMobile && !isInApp && window.navigator.brave) {
+    try {
+      var braveResult = window.navigator.brave.isBrave();
+      if (braveResult && typeof braveResult.then === 'function') {
+        braveResult.then(function (v) { isBraveMobile = !!v; }).catch(function () { isBraveMobile = true; });
+      } else {
+        isBraveMobile = true; // older sync API
+      }
+    } catch (e) { isBraveMobile = true; }
+  }
+
+  // Expose for debugging / other modules
   window.__paypeDevice = {
     ua: ua,
     isIOS: isIOS, isAndroid: isAndroid, isMobile: isMobile,
     isStandalone: isStandalone,
     isInApp: isInApp, inAppName: inAppName, inAppSignals: IA,
+    isSafariIOS: isSafariIOS, isChromeAndroid: isChromeAndroid,
+    get isBrave() { return isBraveMobile; },
     accountURL: ACCOUNT_URL
   };
 
   // ── Core handler ──────────────────────────────────────────────
   function openAccount(e) {
-    // Desktop or already in PWA: plain same-tab navigation
-    if (!isMobile || isStandalone) {
-      e.preventDefault();
-      window.location.href = ACCOUNT_URL;
-      return;
-    }
-
-    // Real mobile browser: navigate directly (Safari / Chrome install prompt works)
-    if (!isInApp) {
-      e.preventDefault();
-      window.location.href = ACCOUNT_URL;
-      return;
-    }
-
-    // ── In-app browser breakout ────────────────────────────────
     e.preventDefault();
 
-    if (isAndroid) {
-      // Chrome intent URI: asks Android to open URL in the default browser
-      // Falls back to ACCOUNT_URL if no suitable browser found
-      var intentUrl =
-        'intent://' + ACCOUNT_URL.replace(/^https?:\/\//, '') +
-        '#Intent;scheme=https;' +
-        'S.browser_fallback_url=' + encodeURIComponent(ACCOUNT_URL) + ';end';
-      window.location.href = intentUrl;
-      // Show overlay after a short wait in case the intent was not handled
-      setTimeout(showOverlay, 1400);
-    } else {
-      // iOS — no reliable programmatic scheme; guide the user manually
-      showOverlay();
+    // ① Desktop or already running as PWA — navigate directly
+    if (!isMobile || isStandalone) {
+      window.location.href = ACCOUNT_URL;
+      return;
     }
+
+    // ② In-app browser — must break out first
+    if (isInApp) {
+      if (isAndroid) {
+        // Intent with no package = Android picks default browser (best for in-app)
+        var intent = 'intent://' + ACCOUNT_URL.replace(/^https?:\/\//, '') +
+          '#Intent;scheme=https;S.browser_fallback_url=' + encodeURIComponent(ACCOUNT_URL) + ';end';
+        window.location.href = intent;
+        setTimeout(function () {
+          showOverlay({
+            title: 'Open in Chrome',
+            body: 'You\'re in ' + inAppName + '\'s browser — it can\'t install paype.cc as an app.',
+            inst: 'Tap <strong>⋮</strong> → <strong>Open in Chrome</strong> (or your default browser)',
+          });
+        }, 1400);
+      } else {
+        showOverlay({
+          title: 'Open in Safari',
+          body: 'You\'re in ' + inAppName + '\'s browser — it can\'t install paype.cc as an app.',
+          inst: 'Tap <strong>⋯</strong> or <strong>↗ Share</strong> → <strong>Open in Safari</strong>',
+        });
+      }
+      return;
+    }
+
+    // ③ Android — non-Chrome (Brave, Samsung, Firefox, Opera, Edge, DDG, UC, …)
+    if (isAndroid && (!isChromeAndroid || isBraveMobile)) {
+      // Intent targeting Chrome specifically; fallback URL opens default browser if Chrome absent
+      var chromeIntent = 'intent://' + ACCOUNT_URL.replace(/^https?:\/\//, '') +
+        '#Intent;scheme=https;' +
+        'package=com.android.chrome;' +
+        'S.browser_fallback_url=' + encodeURIComponent(ACCOUNT_URL) + ';end';
+      window.location.href = chromeIntent;
+      setTimeout(function () {
+        showOverlay({
+          title: 'Open in Chrome',
+          body: 'paype.cc needs Chrome to install as a home-screen app and work offline. Your current browser doesn\'t support this.',
+          inst: 'Tap <strong>⋮</strong> → <strong>Open in Chrome</strong>, or paste the link in Chrome.',
+        });
+      }, 1400);
+      return;
+    }
+
+    // ④ iOS — non-Safari (Chrome for iOS, Firefox iOS, Edge iOS, DDG, …)
+    if (isIOS && !isSafariIOS) {
+      showOverlay({
+        title: 'Open in Safari',
+        body: 'paype.cc needs Safari to install as a home-screen app on iPhone. Other iOS browsers can\'t do this.',
+        inst: 'Tap <strong>↗ Share</strong> → <strong>Open in Safari</strong>, or copy the link and paste it in Safari.',
+      });
+      return;
+    }
+
+    // ⑤ Correct browser (Chrome on Android, Safari on iOS) — go
+    window.location.href = ACCOUNT_URL;
   }
 
-  // ── Breakout overlay ──────────────────────────────────────────
-  function showOverlay() {
+  // ── Overlay (shared by all scenarios) ─────────────────────────
+  function showOverlay(opts) {
     if (document.getElementById('paype-breakout')) return;
-
-    var browserName = isIOS ? 'Safari' : 'Chrome';
-    var instruction = isIOS
-      ? 'Tap <strong>⋯</strong> or <strong>↗&thinsp;Share</strong> → <strong>Open in Safari</strong>'
-      : 'Tap <strong>⋮</strong> → <strong>Open in Chrome</strong>';
 
     var el = document.createElement('div');
     el.id = 'paype-breakout';
@@ -130,17 +183,14 @@
       '<div class="pb-bd" aria-hidden="true"></div>' +
       '<div class="pb-card">' +
       '  <p class="pb-logo">PAYPE<span>.cc</span></p>' +
-      '  <p class="pb-title">Open in ' + browserName + '</p>' +
-      '  <p class="pb-body">You\'re in ' + inAppName + '\'s browser. ' +
-      '  To open a paype.cc account (and install the app), please switch to ' + browserName + '.</p>' +
-      '  <p class="pb-inst">' + instruction + '</p>' +
+      '  <p class="pb-title">' + opts.title + '</p>' +
+      '  <p class="pb-body">' + opts.body + '</p>' +
+      '  <p class="pb-inst">' + opts.inst + '</p>' +
       '  <button class="pb-copy" data-url="' + ACCOUNT_URL + '">Copy link</button>' +
       '  <button class="pb-dismiss">Dismiss</button>' +
       '</div>';
 
     document.body.appendChild(el);
-
-    // Two rAF frames so the transition fires after paint
     requestAnimationFrame(function () {
       requestAnimationFrame(function () { el.classList.add('pb-open'); });
     });
@@ -149,7 +199,6 @@
       el.classList.remove('pb-open');
       setTimeout(function () { if (el.parentNode) el.remove(); }, 300);
     }
-
     el.querySelector('.pb-bd').addEventListener('click', close);
     el.querySelector('.pb-dismiss').addEventListener('click', close);
     document.addEventListener('keydown', function esc(ev) {
@@ -158,7 +207,7 @@
 
     el.querySelector('.pb-copy').addEventListener('click', function () {
       var btn = this;
-      var text = btn.getAttribute('data-url');
+      var text = ACCOUNT_URL;
       var done = function () { btn.textContent = '✓ Copied!'; };
       if (navigator.clipboard) {
         navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text); done(); });
@@ -177,14 +226,13 @@
   }
 
   // ── Event delegation ──────────────────────────────────────────
-  // Handles both static and dynamically injected [data-open-account] elements
   document.addEventListener('click', function (e) {
     var el = e.target.closest('[data-open-account]');
     if (!el) return;
     openAccount(e);
   });
 
-  // ── Overlay styles (injected; keeps CSS in one deployable file) ─
+  // ── Overlay styles ────────────────────────────────────────────
   var css = [
     '#paype-breakout{position:fixed;inset:0;z-index:9000;display:flex;align-items:flex-end;justify-content:center;pointer-events:none}',
     '#paype-breakout.pb-open{pointer-events:auto}',
@@ -200,8 +248,8 @@
     '#paype-breakout .pb-copy{display:block;width:100%;padding:14px;background:#b8ff5a;color:#0d0d0d;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;margin-bottom:10px;text-align:center}',
     '#paype-breakout .pb-dismiss{display:block;width:100%;padding:12px;background:transparent;color:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.15);border-radius:10px;font-size:.88rem;cursor:pointer;text-align:center}',
   ].join('');
-  var styleEl = document.createElement('style');
-  styleEl.textContent = css;
-  document.head.appendChild(styleEl);
+  var s = document.createElement('style');
+  s.textContent = css;
+  document.head.appendChild(s);
 
 })();
