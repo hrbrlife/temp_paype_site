@@ -44,7 +44,7 @@
 (function () {
   'use strict';
 
-  var ACCOUNT_URL = 'https://pay.paype.cc';
+  var ACCOUNT_URL = 'https://my.paype.cc/shared/_HWhUqMR9r7ZGO75Gd9HUcEbj9DZbOvaoco7JhQ_bpU';
   var PROMO_KEY   = 'paype_promo';
 
   // ── Promo code extraction & URL cleaning ──────────────────────
